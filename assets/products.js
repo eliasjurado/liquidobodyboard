@@ -211,7 +211,7 @@ window.PRODUCTS = [
 
 // Moneda
 window.CURRENCY_SYMBOL = { "Soles": "S/" };
-window.WHATSAPP_NUMBER = "51951954781";
+window.WHATSAPP_NUMBER = "51954781873";
 window.STORE_NAME = "Liquido Bodyboard";
 window.STORE_LOCATION = "Lima, Perú";
 window.STORE_TAGLINE = "Ride the Wave. Feel the Rush.";

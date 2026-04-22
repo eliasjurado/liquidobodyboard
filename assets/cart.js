@@ -9,7 +9,7 @@
   /* ---------- Constantes ---------- */
   const STORAGE_KEY = "liquido-bodyboard_cart_v1";
   const SYMBOL      = "S/";
-  const WA_NUMBER   = window.WHATSAPP_NUMBER || "51951954781";
+  const WA_NUMBER   = window.WHATSAPP_NUMBER || "51954781873";
   const STORE_NAME  = window.STORE_NAME      || "Liquido Bodyboard";
   const STORE_UPPER = "LIQUIDO BODYBOARD";
   const TAGLINE     = window.STORE_TAGLINE   || "Ride the Wave. Feel the Rush.";
