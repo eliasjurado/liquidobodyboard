@@ -99,9 +99,14 @@ h1, h2, h3, h4 { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.04em; 
 .logo {
   font-family: 'Bebas Neue', sans-serif; font-size: 1.7rem;
   color: var(--c-white); letter-spacing: 0.06em;
-  display: flex; align-items: center; gap: 8px;
+  display: flex; align-items: center; gap: 10px;
 }
 .logo-dot { color: var(--c-accent); }
+.logo-img {
+  height: 42px; width: 42px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  border: 1.5px solid rgba(255,255,255,0.12);
+}
 
 .nav { display: flex; gap: 32px; }
 .nav a {
@@ -203,16 +208,12 @@ h1, h2, h3, h4 { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.04em; 
   display: flex; justify-content: center; align-items: center;
   position: relative;
 }
-.hero-image-placeholder {
-  width: 100%; max-width: 420px; aspect-ratio: 3/4;
-  border-radius: var(--radius-lg); overflow: hidden;
-  background: linear-gradient(135deg, #111 0%, #1a2940 100%);
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;
-  border: 1px solid rgba(0,194,255,0.15);
-  box-shadow: 0 0 60px rgba(0,194,255,0.1);
+.hero-logo-img {
+  width: 100%; max-width: 400px; aspect-ratio: 1/1;
+  border-radius: 50%; object-fit: cover;
+  border: 2px solid rgba(0,194,255,0.2);
+  box-shadow: 0 0 80px rgba(0,194,255,0.18), 0 0 160px rgba(0,194,255,0.07);
 }
-.hero-image-placeholder svg { opacity: 0.3; }
-.hero-image-placeholder p { color: rgba(255,255,255,0.3); font-size: 0.8rem; text-align: center; padding: 0 20px; }
 
 .hero-stats {
   display: flex; gap: 32px; margin-top: 40px; padding-top: 40px;
