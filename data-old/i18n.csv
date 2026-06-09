@@ -1,0 +1,152 @@
+key,es,en
+nav.home,Inicio,Home
+nav.catalog,Catálogo,Catalog
+nav.about,Nosotros,About
+nav.contact,Contacto,Contact
+nav.whatsapp,WhatsApp,WhatsApp
+nav.aria_cart,Abrir carrito,Open cart
+nav.aria_menu,Abrir menú,Open menu
+nav.mobile_close,Cerrar menú,Close menu
+nav.aria_logo,Liquido Bodyboard — inicio,Liquido Bodyboard — home
+lang.toggle,EN,ES
+lang.aria,Cambiar a inglés,Switch to Spanish
+hero.label,"🌊 Bodyboard · Lima, Perú","🌊 Bodyboard · Lima, Peru"
+hero.sub,"Tablas y accesorios de bodyboard para todos los niveles. Directo del mar a tus manos. Compra sin complicaciones por WhatsApp.","Bodyboard boards and accessories for all skill levels. Straight from the ocean to your hands. Shop hassle-free via WhatsApp."
+hero.cta_catalog,Ver catálogo,Browse catalog
+hero.cta_about,Nuestra historia,Our story
+hero.stat1_label,Calidad verificada,Verified quality
+hero.stat2_label,Productos disponibles,Products available
+hero.stat3_label,Envíos a Lima y provincias,Shipping to Lima & beyond
+hero.img_ph,Foto de producto próximamente,Product photo coming soon
+catalog.title,Catálogo,Catalog
+catalog.subtitle,"Tablas, accesorios y kits para todos los niveles","Boards, accessories and kits for all levels"
+catalog.filter_search,Buscar,Search
+catalog.search_ph,Nombre o descripción…,Name or description…
+catalog.filter_cat,Categoría,Category
+catalog.cat_all,Todas,All
+catalog.filter_badge,Nivel,Level
+catalog.badge_all,Todos,All
+catalog.filter_price,Precio máx. (S/),Max price (S/)
+catalog.price_all,Sin límite,No limit
+catalog.price_50,Hasta S/ 50,Up to S/ 50
+catalog.price_100,Hasta S/ 100,Up to S/ 100
+catalog.price_250,Hasta S/ 250,Up to S/ 250
+catalog.price_400,Hasta S/ 400,Up to S/ 400
+catalog.filter_sort,Ordenar,Sort
+catalog.sort_default,Por defecto,Default
+catalog.sort_price_asc,"Precio: menor a mayor","Price: low to high"
+catalog.sort_price_desc,"Precio: mayor a menor","Price: high to low"
+catalog.sort_name,Nombre A–Z,Name A–Z
+catalog.reset,Limpiar filtros,Clear filters
+catalog.no_results_h3,Sin resultados,No results
+catalog.no_results_p,Intenta ajustar los filtros o,Try adjusting the filters or
+catalog.no_results_btn,limpia los filtros,clear filters
+catalog.card_view,Ver ficha,View details
+catalog.card_add,+ Añadir,+ Add
+catalog.card_unit,/ unidad,/ unit
+catalog.product_single,producto,product
+catalog.product_plural,productos,products
+catalog.stock_low,¡Últimas {n}!,Only {n} left!
+catalog.chip_search,"Búsqueda: ""{v}""","Search: ""{v}"""
+catalog.chip_cat,Categoría: {v},Category: {v}
+catalog.chip_badge,Nivel: {v},Level: {v}
+catalog.chip_price,Hasta S/ {v},Up to S/ {v}
+catalog.chip_sort,Orden: {v},Sort: {v}
+cat.Bodyboards,Bodyboards,Bodyboards
+cat.Accesorios,Accesorios,Accessories
+cat.Kits,Kits,Kits
+badge.Pro,Pro,Pro
+badge.Iniciación,Iniciación,Beginner
+badge.Pack,Pack,Pack
+badge.Accesorio,Accesorio,Accessory
+about.h2_html,Nacimos <span>del mar</span>,We were <span>born from the sea</span>
+about.p1,"Liquido Bodyboard nació con una misión simple: acercar tablas y accesorios de calidad a los riders peruanos, sin intermediarios ni precios inflados.","Liquido Bodyboard was born with a simple mission: bring quality boards and accessories to Peruvian riders, without middlemen or inflated prices."
+about.p2,"Somos apasionados del bodyboard y conocemos las olas del Pacífico como nadie. Por eso seleccionamos cada producto pensando en lo que realmente necesitas para surfear mejor, desde tus primeras olas hasta las más exigentes.","We are passionate bodyboarders and we know the Pacific waves like no one else. That's why we select every product thinking about what you really need to surf better, from your first waves to the most demanding ones."
+about.p3,"Atendemos por WhatsApp para que tu compra sea directa, personalizada y sin complicaciones. Te asesoramos en la elección de tu tabla según tu peso, estatura y nivel.","We serve you via WhatsApp so your purchase is direct, personalized and hassle-free. We advise you on choosing your board based on your weight, height and skill level."
+about.cta,Consúltanos por WhatsApp,Ask us on WhatsApp
+about.img_alt,Rider de bodyboard en ola peruana,Bodyboard rider on a Peruvian wave
+values.label,Por qué elegirnos,Why choose us
+values.h2,"Calidad, pasión y servicio","Quality, passion and service"
+values.sub,"Todo lo que necesitas para tus sesiones de bodyboard, con la garantía de quienes viven el mar.","Everything you need for your bodyboard sessions, backed by people who live for the ocean."
+values.v1_title,Conocemos las olas,We know the waves
+values.v1_desc,"Somos riders activos. Probamos y seleccionamos cada producto en las olas del Pacífico peruano.","We are active riders. We test and select every product in the waves of the Peruvian Pacific."
+values.v2_title,Atención directa,Direct support
+values.v2_desc,"Sin formularios ni esperas. Te atendemos personalmente por WhatsApp y te asesoramos en tu compra.","No forms or waiting. We personally attend you via WhatsApp and advise you on your purchase."
+values.v3_title,Envíos a todo el Perú,Shipping nationwide
+values.v3_desc,"Despachamos a Lima y provincias. Coordina el envío directamente con nosotros al hacer tu pedido.","We ship to Lima and the provinces. Coordinate delivery directly with us when you place your order."
+values.v4_title,Garantía de calidad,Quality guarantee
+values.v4_desc,"Todos nuestros productos pasan por un control de calidad. Si algo falla, lo resolvemos.","All our products go through quality control. If something fails, we fix it."
+contact.h2,Hablemos,Let's talk
+contact.sub,"¿Tienes dudas sobre qué tabla elegir? ¿Quieres hacer un pedido? Escríbenos.","Questions about which board to choose? Want to place an order? Write to us."
+contact.whatsapp,WhatsApp,WhatsApp
+contact.location,Ubicación,Location
+contact.instagram,Instagram,Instagram
+contact.cta_h3,¿Listo para surfear?,Ready to surf?
+contact.cta_p,"Escríbenos por WhatsApp para coordinar tu pedido, consultar disponibilidad o pedir asesoría personalizada para elegir tu tabla ideal.","Write to us on WhatsApp to coordinate your order, check availability, or get personalized advice on your ideal board."
+contact.cta_btn,Escribir por WhatsApp,Message on WhatsApp
+footer.brand_p,"Tablas y accesorios de bodyboard para todos los niveles. Compra directo por WhatsApp desde Lima, Perú.","Bodyboard boards and accessories for all levels. Shop directly via WhatsApp from Lima, Peru."
+footer.nav_title,Navegar,Navigate
+footer.help_title,Ayuda,Help
+footer.help_sizes,Guía de tallas,Size guide
+footer.help_ship,Envíos,Shipping
+footer.copyright,© 2026 Liquido Bodyboard · Lima Perú,© 2026 Liquido Bodyboard · Lima Peru
+footer.tagline,Hecho con pasión por el bodyboard 🌊,Made with passion for bodyboarding 🌊
+cart.title,Tu carrito,Your cart
+cart.empty,Tu carrito está vacío.<br>Añade un producto para empezar.,Your cart is empty.<br>Add a product to get started.
+cart.total,Total,Total
+cart.checkout,Pedir por WhatsApp,Order on WhatsApp
+cart.close,Cerrar carrito,Close cart
+cart.each,c/u,each
+cart.toast_added,añadido al carrito,added to cart
+cart.toast_empty,Tu carrito está vacío,Your cart is empty
+cart.reduce,Reducir cantidad,Decrease quantity
+cart.increase,Aumentar cantidad,Increase quantity
+cart.remove,Eliminar producto,Remove product
+pdp.not_found_h2,Producto no encontrado,Product not found
+pdp.not_found_p,El producto que buscas no existe o fue eliminado.,The product you are looking for doesn't exist or was removed.
+pdp.not_found_btn,Ver catálogo,View catalog
+pdp.breadcrumb_home,Inicio,Home
+pdp.breadcrumb_catalog,Catálogo,Catalog
+pdp.qty_label,Cantidad,Quantity
+pdp.qty_dec,Reducir cantidad,Decrease quantity
+pdp.qty_inc,Aumentar cantidad,Increase quantity
+pdp.buy_now,Comprar por WhatsApp,Buy on WhatsApp
+pdp.add_cart,Añadir al carrito,Add to cart
+pdp.trust1,🌊 Calidad de playa,🌊 Surf-tested quality
+pdp.trust2,🚚 Envío a Lima y provincias,🚚 Shipping to Lima & beyond
+pdp.trust3,✔ Garantía Liquido,✔ Liquido guarantee
+pdp.tab_desc,Descripción,Description
+pdp.tab_specs,Especificaciones,Specifications
+pdp.tab_notes,Notas,Notes
+pdp.related,También te puede interesar,You might also like
+pdp.related_view,Ver ficha,View details
+pdp.related_add,Añadir,Add
+pdp.stock,Stock,Stock
+pdp.weight,Peso,Weight
+pdp.units,uds.,units
+wa.order_title,PEDIDO {store} — {tagline},ORDER {store} — {tagline}
+wa.consult_title,CONSULTA DE COMPRA — {store},PURCHASE INQUIRY — {store}
+wa.ref,Referencia,Reference
+wa.date_label,Fecha,Date
+wa.greeting,Hola {store} 👋,Hello {store} 👋
+wa.confirm_order,Quisiera confirmar el siguiente pedido:,I'd like to confirm the following order:
+wa.interest,Me interesa adquirir el siguiente producto:,I'm interested in purchasing the following product:
+wa.order_detail,DETALLE DEL PEDIDO,ORDER DETAILS
+wa.product_label,Producto,Product
+wa.qty,Cantidad,Quantity
+wa.unit_price,Precio unitario,Unit price
+wa.subtotal,Subtotal,Subtotal
+wa.total_products,Productos distintos,Different products
+wa.total_units,Unidades totales,Total units
+wa.total_pay,TOTAL A PAGAR,TOTAL TO PAY
+wa.how_receive,¿Cómo deseo recibirlo?,How would I like to receive it?
+wa.pickup,Recojo en persona ({location}),Pick up in person ({location})
+wa.delivery,Envío a mi domicilio,Home delivery
+wa.payment_method,Método de pago preferido:,Preferred payment method:
+wa.yape,Yape / Plin,Yape / Plin
+wa.transfer,Transferencia bancaria,Bank transfer
+wa.cash,Efectivo contra entrega,Cash on delivery
+wa.confirm_q,¿Me confirmas disponibilidad y tiempos de entrega? 🙏,Can you confirm availability and delivery times? 🙏
+wa.available_q,¿Está disponible para coordinar? 🙏,Are you available to coordinate? 🙏
+wa.ud,ud.,unit
+wa.uds,uds.,units

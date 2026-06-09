@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#1a1a1a"/>
+  <rect x="200" y="100" width="400" height="600" rx="200" fill="#0a0a0a" stroke="#333" stroke-width="2"/>
+  <text x="400" y="380" font-family="Inter, sans-serif" font-size="22" fill="#888" text-anchor="middle" font-weight="600">LEASH BÍCEP</text>
+  <text x="400" y="420" font-family="Inter, sans-serif" font-size="16" fill="#555" text-anchor="middle">Accesorio</text>
+</svg>

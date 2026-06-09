@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//EliasJurado//ES
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20260610T153000Z
+DTEND:20260610T160000Z
+SUMMARY:Propuesta Líquido Bodyboard - Elías x Pepo
+DESCRIPTION:Presentación de propuesta de intercambio: e-commerce bodyboard × difusión + referidos. Leer la propuesta juntos y cerrar el acuerdo.
+LOCATION:Google Meet
+ORGANIZER;CN=Elías Jurado:mailto:info@eliasjurado.com
+ATTENDEE;CN=Jose Herrera;ROLE=REQ-PARTICIPANT:mailto:jaherrerasantos@gmail.com
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Recordatorio: Propuesta Líquido Bodyboard en 15 min
+END:VALARM
+END:VEVENT
+END:VCALENDAR
