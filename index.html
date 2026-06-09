@@ -5,51 +5,24 @@ layout: default
 ---
 
 <!-- ============================================================
-     HERO
+     HERO BANNER
      ============================================================ -->
 <section class="hero" id="top">
   <div class="hero-bg"></div>
-  <div class="hero-wave-pattern"></div>
-  <div class="container hero-inner">
-
+  <div class="container">
     <div class="hero-content">
-      <div class="hero-label" data-i18n="hero.label">🌊 Bodyboard · Lima, Perú</div>
-      <h1>
-        RIDE THE<br>
-        <span>WAVE</span>
-      </h1>
-      <p class="hero-sub" data-i18n="hero.sub">
+      <h1>RIDE THE<br>WAVE</h1>
+      <p class="hero-sub">
         Tablas y accesorios de bodyboard para todos los niveles.
         Directo del mar a tus manos. Compra sin complicaciones por WhatsApp.
       </p>
       <div class="hero-ctas">
-        <a href="#catalogo" class="btn btn-primary" data-i18n="hero.cta_catalog">Ver catálogo</a>
-        <a href="#nosotros" class="btn btn-ghost" data-i18n="hero.cta_about">Nuestra historia</a>
-      </div>
-
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <span>100%</span>
-          <small data-i18n="hero.stat1_label">Calidad verificada</small>
-        </div>
-        <div class="hero-stat">
-          <span>10+</span>
-          <small data-i18n="hero.stat2_label">Productos disponibles</small>
-        </div>
-        <div class="hero-stat">
-          <span>🇵🇪</span>
-          <small data-i18n="hero.stat3_label">Envíos a Lima y provincias</small>
-        </div>
+        <a href="#catalogo" class="btn btn-primary btn-lg">Ver catálogo</a>
+        <a href="#nosotros" class="btn btn-secondary btn-lg">Nuestra historia</a>
       </div>
     </div>
-
-    <div class="hero-image">
-      <img src="{{ '/img/logo.jpg' | relative_url }}" alt="Liquido Bodyboard" class="hero-logo-img">
-    </div>
-
   </div>
 </section>
-
 
 <!-- ============================================================
      CATÁLOGO
@@ -58,59 +31,56 @@ layout: default
   <div class="container">
 
     <div class="catalog-header">
-      <div class="catalog-title">
-        <h2 data-i18n="catalog.title">Catálogo</h2>
-        <p data-i18n="catalog.subtitle">Tablas, accesorios y kits para todos los niveles</p>
-      </div>
+      <h2>Catálogo</h2>
       <span class="catalog-count" id="catalogCount"></span>
     </div>
 
     <!-- Barra de filtros -->
-    <div class="filter-bar" role="search" aria-label="Filtrar productos">
+    <div class="filter-bar">
       <div class="filter-group">
-        <label for="filterSearch" data-i18n="catalog.filter_search">Buscar</label>
-        <input type="text" id="filterSearch" data-i18n-placeholder="catalog.search_ph" placeholder="Nombre o descripción…">
+        <label for="filterSearch">Buscar</label>
+        <input type="text" id="filterSearch" placeholder="Nombre o descripción…">
       </div>
       <div class="filter-group">
-        <label for="filterCat" data-i18n="catalog.filter_cat">Categoría</label>
+        <label for="filterCat">Categoría</label>
         <select id="filterCat">
-          <option value="" data-i18n="catalog.cat_all">Todas</option>
-          <option value="Bodyboards" data-i18n="cat.Bodyboards">Bodyboards</option>
-          <option value="Accesorios" data-i18n="cat.Accesorios">Accesorios</option>
-          <option value="Kits" data-i18n="cat.Kits">Kits</option>
+          <option value="">Todas</option>
+          <option value="Bodyboards">Bodyboards</option>
+          <option value="Accesorios">Accesorios</option>
+          <option value="Kits">Kits</option>
         </select>
       </div>
       <div class="filter-group">
-        <label for="filterBadge" data-i18n="catalog.filter_badge">Nivel</label>
+        <label for="filterBadge">Nivel</label>
         <select id="filterBadge">
-          <option value="" data-i18n="catalog.badge_all">Todos</option>
-          <option value="Pro" data-i18n="badge.Pro">Pro</option>
-          <option value="Iniciación" data-i18n="badge.Iniciación">Iniciación</option>
-          <option value="Pack" data-i18n="badge.Pack">Pack</option>
-          <option value="Accesorio" data-i18n="badge.Accesorio">Accesorio</option>
+          <option value="">Todos</option>
+          <option value="Pro">Pro</option>
+          <option value="Iniciación">Iniciación</option>
+          <option value="Pack">Pack</option>
+          <option value="Accesorio">Accesorio</option>
         </select>
       </div>
       <div class="filter-group">
-        <label for="filterPrice" data-i18n="catalog.filter_price">Precio máx. (S/)</label>
+        <label for="filterPrice">Precio máx.</label>
         <select id="filterPrice">
-          <option value="" data-i18n="catalog.price_all">Sin límite</option>
-          <option value="50" data-i18n="catalog.price_50">Hasta S/ 50</option>
-          <option value="100" data-i18n="catalog.price_100">Hasta S/ 100</option>
-          <option value="250" data-i18n="catalog.price_250">Hasta S/ 250</option>
-          <option value="400" data-i18n="catalog.price_400">Hasta S/ 400</option>
+          <option value="">Sin límite</option>
+          <option value="50">Hasta S/ 50</option>
+          <option value="100">Hasta S/ 100</option>
+          <option value="250">Hasta S/ 250</option>
+          <option value="400">Hasta S/ 400</option>
         </select>
       </div>
       <div class="filter-group">
-        <label for="filterSort" data-i18n="catalog.filter_sort">Ordenar</label>
+        <label for="filterSort">Ordenar</label>
         <select id="filterSort">
-          <option value="" data-i18n="catalog.sort_default">Por defecto</option>
-          <option value="price-asc" data-i18n="catalog.sort_price_asc">Precio: menor a mayor</option>
-          <option value="price-desc" data-i18n="catalog.sort_price_desc">Precio: mayor a menor</option>
-          <option value="name" data-i18n="catalog.sort_name">Nombre A–Z</option>
+          <option value="">Por defecto</option>
+          <option value="price-asc">Precio: menor a mayor</option>
+          <option value="price-desc">Precio: mayor a menor</option>
+          <option value="name">Nombre A–Z</option>
         </select>
       </div>
-      <div>
-        <button id="resetFilters" class="btn btn-sm" style="white-space:nowrap" data-i18n="catalog.reset">Limpiar filtros</button>
+      <div class="filter-group" style="justify-content: flex-end;">
+        <button id="resetFilters" class="btn btn-sm btn-secondary">Limpiar filtros</button>
       </div>
     </div>
 
@@ -123,7 +93,6 @@ layout: default
   </div>
 </section>
 
-
 <!-- ============================================================
      SOBRE NOSOTROS
      ============================================================ -->
@@ -131,26 +100,26 @@ layout: default
   <div class="container">
     <div class="about-grid">
       <div class="about-img-wrap">
-        <img src="{{ '/img/about.webp' | relative_url }}" alt="Rider de bodyboard en ola peruana" data-i18n-alt="about.img_alt"
-             onerror="this.parentElement.innerHTML='<div class=\\'about-img-placeholder\\'>🌊</div>'">
+        <img src="{{ '/img/about.webp' | relative_url }}" alt="Rider de bodyboard en ola peruana"
+             onerror="this.parentElement.innerHTML='<div class=\'about-img-placeholder\'><svg width=\'48\' height=\'48\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M21 14c-1 0-1.9-.4-2.6-1-.7.6-1.6 1-2.6 1-1 0-1.9-.4-2.6-1-.7.6-1.6 1-2.6 1-1 0-1.9-.4-2.6-1-.7.6-1.6 1-2.6 1v-2c.6 0 1.1-.2 1.5-.6.4-.4.6-.9.6-1.4h2c0 .6.2 1.1.6 1.4.4.4.9.6 1.5.6s1.1-.2 1.5-.6c.4-.4.6-.9.6-1.4h2c0 .6.2 1.1.6 1.4.4.4.9.6 1.5.6s1.1-.2 1.5-.6c.4-.4.6-.9.6-1.4h2c0 .6.2 1.1.6 1.4.4.4.9.6 1.5.6v2z\'/></svg></div>'">
       </div>
       <div class="about-content">
-        <h2 data-i18n-html="about.h2_html">Nacimos <span>del mar</span></h2>
-        <p data-i18n="about.p1">
+        <h2>Nacimos del mar</h2>
+        <p>
           Liquido Bodyboard nació con una misión simple: acercar tablas y accesorios de calidad
           a los riders peruanos, sin intermediarios ni precios inflados.
         </p>
-        <p data-i18n="about.p2">
+        <p>
           Somos apasionados del bodyboard y conocemos las olas del Pacífico como nadie.
           Por eso seleccionamos cada producto pensando en lo que realmente necesitas
           para surfear mejor, desde tus primeras olas hasta las más exigentes.
         </p>
-        <p data-i18n="about.p3">
+        <p>
           Atendemos por WhatsApp para que tu compra sea directa, personalizada y sin complicaciones.
           Te asesoramos en la elección de tu tabla según tu peso, estatura y nivel.
         </p>
         <a href="https://wa.me/{{ site.data.sitio.telefono }}?text=Hola%2C%20quisiera%20que%20me%20ayuden%20a%20elegir%20una%20tabla"
-           target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="about.cta">
+           target="_blank" rel="noopener" class="btn btn-whatsapp">
           Consúltanos por WhatsApp
         </a>
       </div>
@@ -158,103 +127,123 @@ layout: default
   </div>
 </section>
 
-
 <!-- ============================================================
      VALORES
      ============================================================ -->
 <section class="values-section section-pad" id="valores">
   <div class="container">
-    <span class="section-label" data-i18n="values.label">Por qué elegirnos</span>
-    <h2 data-i18n="values.h2">Calidad, pasión y servicio</h2>
-    <p data-i18n="values.sub">Todo lo que necesitas para tus sesiones de bodyboard, con la garantía de quienes viven el mar.</p>
+    <h2>Por qué elegirnos</h2>
 
     <div class="values-grid">
       <div class="value-card">
-        <div class="value-icon">🌊</div>
-        <h3 data-i18n="values.v1_title">Conocemos las olas</h3>
-        <p data-i18n="values.v1_desc">Somos riders activos. Probamos y seleccionamos cada producto en las olas del Pacífico peruano.</p>
+        <div class="value-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 14c-1 0-1.9-.4-2.6-1-.7.6-1.6 1-2.6 1-1 0-1.9-.4-2.6-1-.7.6-1.6 1-2.6 1-1 0-1.9-.4-2.6-1-.7.6-1.6 1-2.6 1v-2c.6 0 1.1-.2 1.5-.6.4-.4.6-.9.6-1.4h2c0 .6.2 1.1.6 1.4.4.4.9.6 1.5.6s1.1-.2 1.5-.6c.4-.4.6-.9.6-1.4h2c0 .6.2 1.1.6 1.4.4.4.9.6 1.5.6s1.1-.2 1.5-.6c.4-.4.6-.9.6-1.4h2c0 .6.2 1.1.6 1.4.4.4.9.6 1.5.6v2z"/>
+          </svg>
+        </div>
+        <h3>Conocemos las olas</h3>
+        <p>Somos riders activos. Probamos y seleccionamos cada producto en las olas del Pacífico peruano.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon">💬</div>
-        <h3 data-i18n="values.v2_title">Atención directa</h3>
-        <p data-i18n="values.v2_desc">Sin formularios ni esperas. Te atendemos personalmente por WhatsApp y te asesoramos en tu compra.</p>
+        <div class="value-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+          </svg>
+        </div>
+        <h3>Atención directa</h3>
+        <p>Sin formularios ni esperas. Te atendemos personalmente por WhatsApp y te asesoramos en tu compra.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon">🚚</div>
-        <h3 data-i18n="values.v3_title">Envíos a todo el Perú</h3>
-        <p data-i18n="values.v3_desc">Despachamos a Lima y provincias. Coordina el envío directamente con nosotros al hacer tu pedido.</p>
+        <div class="value-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+          </svg>
+        </div>
+        <h3>Envíos a todo el Perú</h3>
+        <p>Despachamos a Lima y provincias. Coordina el envío directamente con nosotros al hacer tu pedido.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon">✔</div>
-        <h3 data-i18n="values.v4_title">Garantía de calidad</h3>
-        <p data-i18n="values.v4_desc">Todos nuestros productos pasan por un control de calidad. Si algo falla, lo resolvemos.</p>
+        <div class="value-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+          </svg>
+        </div>
+        <h3>Garantía de calidad</h3>
+        <p>Todos nuestros productos pasan por un control de calidad. Si algo falla, lo resolvemos.</p>
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- ============================================================
      CONTACTO
      ============================================================ -->
 <section class="contact-section section-pad" id="contacto">
   <div class="container">
-    <h2 data-i18n="contact.h2">Hablemos</h2>
-    <p data-i18n="contact.sub">¿Tienes dudas sobre qué tabla elegir? ¿Quieres hacer un pedido? Escríbenos.</p>
+    <h2>Hablemos</h2>
+    <p>¿Tienes dudas sobre qué tabla elegir? ¿Quieres hacer un pedido? Escríbenos.</p>
 
     <div class="contact-grid">
       <div class="contact-info">
         <div class="contact-item">
-          <span class="contact-item-icon">📱</span>
+          <div class="contact-item-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+            </svg>
+          </div>
           <div class="contact-item-text">
-            <strong data-i18n="contact.whatsapp">WhatsApp</strong>
+            <strong>WhatsApp</strong>
             <a href="https://wa.me/{{ site.data.sitio.telefono }}" target="_blank" rel="noopener">+51 {{ site.data.sitio.telefono | slice: 0, 3 }} {{ site.data.sitio.telefono | slice: 3, 3 }} {{ site.data.sitio.telefono | slice: 6, 3 }}</a>
           </div>
         </div>
         <div class="contact-item">
-          <span class="contact-item-icon">📍</span>
+          <div class="contact-item-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+          </div>
           <div class="contact-item-text">
-            <strong data-i18n="contact.location">Ubicación</strong>
+            <strong>Ubicación</strong>
             <span>{{ site.data.sitio.ubicacion }}</span>
           </div>
         </div>
         <div class="contact-item">
-          <span class="contact-item-icon">📸</span>
+          <div class="contact-item-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
+              <circle cx="12" cy="12" r="3.5"/>
+            </svg>
+          </div>
           <div class="contact-item-text">
-            <strong data-i18n="contact.instagram">Instagram</strong>
+            <strong>Instagram</strong>
             <a href="{{ site.data.sitio.instagram_url }}" target="_blank" rel="noopener">{{ site.data.sitio.instagram }}</a>
           </div>
         </div>
       </div>
 
       <div class="contact-cta">
-        <h3 data-i18n="contact.cta_h3">¿Listo para surfear?</h3>
-        <p data-i18n="contact.cta_p">Escríbenos por WhatsApp para coordinar tu pedido, consultar disponibilidad o pedir asesoría personalizada para elegir tu tabla ideal.</p>
-        <a href="https://wa.me/{{ site.data.sitio.telefono }}?text=Hola%20Liquido%20Bodyboard%20%F0%9F%91%8B%2C%20quiero%20información%20sobre%20sus%20productos"
-           target="_blank" rel="noopener" class="btn btn-whatsapp">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          <span data-i18n="contact.cta_btn">Escribir por WhatsApp</span>
+        <h3>¿Listo para surfear?</h3>
+        <p>Escríbenos por WhatsApp para coordinar tu pedido, consultar disponibilidad o pedir asesoría personalizada para elegir tu tabla ideal.</p>
+        <a href="https://wa.me/{{ site.data.sitio.telefono }}?text=Hola%20Liquido%20Bodyboard%2C%20quiero%20información%20sobre%20sus%20productos"
+           target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">
+          Escribir por WhatsApp
         </a>
 
         <div class="social-links">
           <a href="{{ site.data.sitio.instagram_url }}" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
           </a>
           <a href="{{ site.data.sitio.facebook_url }}" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
           </a>
           <a href="{{ site.data.sitio.tiktok_url }}" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.67a8.18 8.18 0 004.78 1.52V6.74a4.85 4.85 0 01-1.01-.05z"/></svg>
-          </a>
-          <a href="https://wa.me/{{ site.data.sitio.telefono }}" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.67a8.18 8.18 0 004.78 1.52V6.74a4.85 4.85 0 01-1.01-.05z"/></svg>
           </a>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- ============================================================
      CATÁLOGO INLINE SCRIPT
@@ -294,33 +283,28 @@ layout: default
     const countEl = document.getElementById("catalogCount");
     if (!grid) return;
     const products = applyFilters();
-    if (countEl) countEl.textContent = `${products.length} ${products.length !== 1 ? t("catalog.product_plural") : t("catalog.product_single")}`;
+    if (countEl) countEl.textContent = `${products.length} producto${products.length !== 1 ? 's' : ''}`;
     if (products.length === 0) {
-      grid.innerHTML = `<div class="no-results"><h3>${t("catalog.no_results_h3")}</h3><p>${t("catalog.no_results_p")} <button id="noResReset" style="color:var(--c-accent);font-weight:600;cursor:pointer">${t("catalog.no_results_btn")}</button>.</p></div>`;
-      document.getElementById("noResReset")?.addEventListener("click", resetFilters);
+      grid.innerHTML = `<div class="no-results"><h3>Sin resultados</h3><p>No encontramos productos con esos filtros.</p></div>`;
       return;
     }
     grid.innerHTML = products.map((p) => `
       <article class="product-card">
         <a href="${p.slug.startsWith('http') ? p.slug : 'producto/' + p.slug + '.html'}" class="card-img-wrap" tabindex="-1">
           <img src="img/${p.id}.webp" alt="${p.nombre}" loading="lazy"
-               onerror="this.parentElement.innerHTML='<div class=\\'card-img-placeholder\\'>🏄</div>'">
-          ${p.badge ? `<span class="card-badge badge-${p.badge}">${t("badge." + p.badge)}</span>` : ""}
+               onerror="this.parentElement.innerHTML='<div class=\'card-img-placeholder\'><svg width=\'48\' height=\'48\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7\'/></svg></div>'">
+          ${p.badge ? `<span class="card-badge badge-${p.badge}">${p.badge}</span>` : ""}
         </a>
         <div class="card-body">
-          <div class="card-category">${t("cat." + p.categoria)}</div>
+          <div class="card-category">${p.categoria}</div>
           <h3 class="card-name">
             <a href="${p.slug.startsWith('http') ? p.slug : 'producto/' + p.slug + '.html'}" style="color:inherit">${p.nombre}</a>
           </h3>
           <p class="card-desc">${p.descripcion_corta}</p>
-          <div class="card-meta">
-            <span class="chip chip-gray">${p.peso}</span>
-            ${p.stock <= 3 ? `<span class="chip" style="background:#fff3cd;color:#856404">${t("catalog.stock_low", { n: p.stock })}</span>` : ""}
-          </div>
-          <div class="card-price">${SYMBOL} ${p.precio.toFixed(2)} <small>${t("catalog.card_unit")}</small></div>
+          <div class="card-price">${SYMBOL} ${p.precio.toFixed(2)}</div>
           <div class="card-actions">
-            <a href="${p.slug.startsWith('http') ? p.slug : 'producto/' + p.slug + '.html'}" class="btn btn-dark btn-sm">${t("catalog.card_view")}</a>
-            <button class="btn btn-primary btn-sm" data-add-id="${p.id}" aria-label="Añadir ${p.nombre} al carrito">${t("catalog.card_add")}</button>
+            <a href="${p.slug.startsWith('http') ? p.slug : 'producto/' + p.slug + '.html'}" class="btn btn-secondary btn-sm">Ver detalle</a>
+            <button class="btn btn-primary btn-sm" data-add-id="${p.id}" aria-label="Añadir ${p.nombre} al carrito">Añadir</button>
           </div>
         </div>
       </article>`).join("");
@@ -336,13 +320,13 @@ layout: default
   function renderChips() {
     const container = document.getElementById("filterChips");
     if (!container) return;
-    const sortLabels = { "price-asc": t("catalog.sort_price_asc"), "price-desc": t("catalog.sort_price_desc"), "name": t("catalog.sort_name") };
+    const sortLabels = { "price-asc": "Precio: menor a mayor", "price-desc": "Precio: mayor a menor", "name": "Nombre A–Z" };
     const chips = [];
-    if (state.search) chips.push({ key: "search", label: t("catalog.chip_search", { v: state.search }) });
-    if (state.cat)    chips.push({ key: "cat",    label: t("catalog.chip_cat",    { v: t("cat."   + state.cat)   }) });
-    if (state.badge)  chips.push({ key: "badge",  label: t("catalog.chip_badge",  { v: t("badge." + state.badge) }) });
-    if (state.price)  chips.push({ key: "price",  label: t("catalog.chip_price",  { v: state.price }) });
-    if (state.sort)   chips.push({ key: "sort",   label: t("catalog.chip_sort",   { v: sortLabels[state.sort] || state.sort }) });
+    if (state.search) chips.push({ key: "search", label: `Buscar: ${state.search}` });
+    if (state.cat)    chips.push({ key: "cat",    label: `Categoría: ${state.cat}` });
+    if (state.badge)  chips.push({ key: "badge",  label: `Nivel: ${state.badge}` });
+    if (state.price)  chips.push({ key: "price",  label: `Hasta S/ ${state.price}` });
+    if (state.sort)   chips.push({ key: "sort",   label: sortLabels[state.sort] || state.sort });
     container.innerHTML = chips.map((c) => `<span class="filter-chip-active">${c.label} <button data-clear="${c.key}" aria-label="Quitar filtro ${c.label}">✕</button></span>`).join("");
     container.querySelectorAll("[data-clear]").forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -403,7 +387,6 @@ layout: default
     bindMobileNav();
     bindFilters();
     renderGrid();
-    window.addEventListener("liquido:langchange", () => { renderGrid(); window.I18N.applyLang(); });
   });
 })();
 </script>
