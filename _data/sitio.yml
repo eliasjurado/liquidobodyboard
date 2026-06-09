@@ -1,0 +1,15 @@
+# ============================================================
+#  LIQUIDO BODYBOARD — Datos del sitio
+# ============================================================
+nombre: Liquido Bodyboard
+tagline: "Ride the Wave. Feel the Rush."
+ubicacion: Lima, Perú
+telefono: "51954781873"
+moneda:
+  codigo: PEN
+  simbolo: "S/"
+whatsapp_url: "https://wa.me/51954781873"
+instagram: "@liquido_bodyboard"
+instagram_url: "https://www.instagram.com/liquido_bodyboard/"
+facebook_url: "https://www.facebook.com/LiquidoBodyboard/"
+tiktok_url: "https://www.tiktok.com/@liquidobodyboard"

@@ -1,0 +1,52 @@
+# ============================================================
+#  LIQUIDO BODYBOARD — Configuración Jekyll
+#  Maqueta para GitHub Pages
+# ============================================================
+title: Liquido Bodyboard
+tagline: Ride the Wave. Feel the Rush.
+description: Tablas y accesorios de bodyboard para todos los niveles. Directo del mar a tus manos. Lima, Perú.
+lang: es
+
+url: "https://liquido-bodyboard.com"
+baseurl: ""
+
+# Colecciones
+collections:
+  productos:
+    output: true
+    permalink: /producto/:slug.html
+
+defaults:
+  - scope:
+      path: ""
+      type: productos
+    values:
+      layout: producto
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+
+# Excluir archivos
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - data/
+  - data-old/
+  - producto/
+  - producto-old/
+  - generate_product_pages.py
+  - download_images.py
+  - reunion-pepo.ics
+
+# Plugins (compatible con GH Pages)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+sass:
+  style: compressed

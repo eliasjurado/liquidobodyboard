@@ -1,0 +1,45 @@
+<!-- HEADER STICKY -->
+<header class="header" id="mainHeader">
+  <div class="header-inner">
+    <a href="{{ '/' | relative_url }}" class="logo" aria-label="Liquido Bodyboard — inicio">
+      <img src="{{ '/img/logo.jpg' | relative_url }}" alt="" class="logo-img" aria-hidden="true">
+      LIQUIDO<span class="logo-dot">.</span>
+    </a>
+
+    <nav class="nav" role="navigation" aria-label="Navegación principal">
+      <a href="{{ '/' | relative_url }}" data-i18n="nav.home">Inicio</a>
+      <a href="{{ '/' | relative_url }}#catalogo" data-i18n="nav.catalog">Catálogo</a>
+      <a href="{{ '/' | relative_url }}#nosotros" data-i18n="nav.about">Nosotros</a>
+      <a href="{{ '/' | relative_url }}#contacto" data-i18n="nav.contact">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="langToggleBtn" class="lang-toggle" aria-label="Cambiar a inglés">EN</button>
+      <a href="https://wa.me/{{ site.data.sitio.telefono }}?text=Hola%20Liquido%20Bodyboard%2C%20quiero%20información%20sobre%20sus%20productos"
+         target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm" aria-label="Contactar por WhatsApp">
+        <span data-i18n="nav.whatsapp">WhatsApp</span>
+      </a>
+      <button class="cart-btn" id="cartOpenBtn" data-cart-open data-i18n-aria="nav.aria_cart" aria-label="Abrir carrito">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-badge" style="display:none">0</span>
+      </button>
+      <button class="hamburger" id="hamburgerBtn" data-i18n-aria="nav.aria_menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Menú móvil -->
+<nav class="mobile-nav" id="mobileNav" role="navigation" aria-label="Menú móvil">
+  <button class="mobile-nav-close" id="mobileNavClose" data-i18n-aria="nav.mobile_close" aria-label="Cerrar menú">✕</button>
+  <a href="{{ '/' | relative_url }}"       class="mobile-nav-link" data-i18n="nav.home">Inicio</a>
+  <a href="{{ '/' | relative_url }}#catalogo" class="mobile-nav-link" data-i18n="nav.catalog">Catálogo</a>
+  <a href="{{ '/' | relative_url }}#nosotros" class="mobile-nav-link" data-i18n="nav.about">Nosotros</a>
+  <a href="{{ '/' | relative_url }}#contacto" class="mobile-nav-link" data-i18n="nav.contact">Contacto</a>
+  <a href="https://wa.me/{{ site.data.sitio.telefono }}" target="_blank" rel="noopener" class="btn btn-whatsapp" style="margin-top:16px" data-i18n="nav.whatsapp">WhatsApp</a>
+</nav>

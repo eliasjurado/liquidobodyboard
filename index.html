@@ -1,74 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Liquido Bodyboard — Tablas y accesorios de bodyboard para todos los niveles. Directo del mar a tus manos. Lima, Perú.">
-  <meta name="theme-color" content="#0a0a0a">
-  <!-- Open Graph -->
-  <meta property="og:title" content="Liquido Bodyboard — Ride the Wave. Feel the Rush.">
-  <meta property="og:description" content="Tablas y accesorios de bodyboard para todos los niveles. Compra directo por WhatsApp.">
-  <meta property="og:type" content="website">
-
-  <title>Liquido Bodyboard — Ride the Wave. Feel the Rush.</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="assets/styles.css">
-</head>
-<body>
-
-<!-- ============================================================
-     HEADER STICKY
-     ============================================================ -->
-<header class="header" id="mainHeader">
-  <div class="header-inner">
-    <a href="#top" class="logo" aria-label="Liquido Bodyboard — inicio">
-      <img src="img/logo.jpg" alt="" class="logo-img" aria-hidden="true">
-      LIQUIDO<span class="logo-dot">.</span>
-    </a>
-
-    <nav class="nav" role="navigation" aria-label="Navegación principal">
-      <a href="#top" data-i18n="nav.home">Inicio</a>
-      <a href="#catalogo" data-i18n="nav.catalog">Catálogo</a>
-      <a href="#nosotros" data-i18n="nav.about">Nosotros</a>
-      <a href="#contacto" data-i18n="nav.contact">Contacto</a>
-    </nav>
-
-    <div class="header-actions">
-      <button id="langToggleBtn" class="lang-toggle" aria-label="Cambiar a inglés">EN</button>
-      <a href="https://wa.me/51954781873?text=Hola%20Liquido%20Bodyboard%2C%20quiero%20información%20sobre%20sus%20productos"
-         target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm" aria-label="Contactar por WhatsApp">
-        <span data-i18n="nav.whatsapp">WhatsApp</span>
-      </a>
-      <button class="cart-btn" id="cartOpenBtn" data-cart-open data-i18n-aria="nav.aria_cart" aria-label="Abrir carrito">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <path d="M16 10a4 4 0 01-8 0"/>
-        </svg>
-        <span class="cart-badge" style="display:none">0</span>
-      </button>
-      <button class="hamburger" id="hamburgerBtn" data-i18n-aria="nav.aria_menu" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<!-- Menú móvil -->
-<nav class="mobile-nav" id="mobileNav" role="navigation" aria-label="Menú móvil">
-  <button class="mobile-nav-close" id="mobileNavClose" data-i18n-aria="nav.mobile_close" aria-label="Cerrar menú">✕</button>
-  <a href="#top"      class="mobile-nav-link" data-i18n="nav.home">Inicio</a>
-  <a href="#catalogo" class="mobile-nav-link" data-i18n="nav.catalog">Catálogo</a>
-  <a href="#nosotros" class="mobile-nav-link" data-i18n="nav.about">Nosotros</a>
-  <a href="#contacto" class="mobile-nav-link" data-i18n="nav.contact">Contacto</a>
-  <a href="https://wa.me/51954781873" target="_blank" rel="noopener" class="btn btn-whatsapp" style="margin-top:16px" data-i18n="nav.whatsapp">WhatsApp</a>
-</nav>
-
+---
+title: Liquido Bodyboard — Ride the Wave. Feel the Rush.
+description: Tablas y accesorios de bodyboard para todos los niveles. Compra directo por WhatsApp.
+layout: default
+---
 
 <!-- ============================================================
      HERO
@@ -110,7 +44,7 @@
     </div>
 
     <div class="hero-image">
-      <img src="img/logo.jpg" alt="Liquido Bodyboard" class="hero-logo-img">
+      <img src="{{ '/img/logo.jpg' | relative_url }}" alt="Liquido Bodyboard" class="hero-logo-img">
     </div>
 
   </div>
@@ -131,7 +65,7 @@
       <span class="catalog-count" id="catalogCount"></span>
     </div>
 
-    <!-- Barra de filtros (estilo bodyboardking.com) -->
+    <!-- Barra de filtros -->
     <div class="filter-bar" role="search" aria-label="Filtrar productos">
       <div class="filter-group">
         <label for="filterSearch" data-i18n="catalog.filter_search">Buscar</label>
@@ -197,7 +131,7 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-img-wrap">
-        <img src="img/about.webp" alt="Rider de bodyboard en ola peruana" data-i18n-alt="about.img_alt"
+        <img src="{{ '/img/about.webp' | relative_url }}" alt="Rider de bodyboard en ola peruana" data-i18n-alt="about.img_alt"
              onerror="this.parentElement.innerHTML='<div class=\\'about-img-placeholder\\'>🌊</div>'">
       </div>
       <div class="about-content">
@@ -215,7 +149,7 @@
           Atendemos por WhatsApp para que tu compra sea directa, personalizada y sin complicaciones.
           Te asesoramos en la elección de tu tabla según tu peso, estatura y nivel.
         </p>
-        <a href="https://wa.me/51954781873?text=Hola%2C%20quisiera%20que%20me%20ayuden%20a%20elegir%20una%20tabla"
+        <a href="https://wa.me/{{ site.data.sitio.telefono }}?text=Hola%2C%20quisiera%20que%20me%20ayuden%20a%20elegir%20una%20tabla"
            target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="about.cta">
           Consúltanos por WhatsApp
         </a>
@@ -274,21 +208,21 @@
           <span class="contact-item-icon">📱</span>
           <div class="contact-item-text">
             <strong data-i18n="contact.whatsapp">WhatsApp</strong>
-            <a href="https://wa.me/51954781873" target="_blank" rel="noopener">+51 954 781 873</a>
+            <a href="https://wa.me/{{ site.data.sitio.telefono }}" target="_blank" rel="noopener">+51 {{ site.data.sitio.telefono | slice: 0, 3 }} {{ site.data.sitio.telefono | slice: 3, 3 }} {{ site.data.sitio.telefono | slice: 6, 3 }}</a>
           </div>
         </div>
         <div class="contact-item">
           <span class="contact-item-icon">📍</span>
           <div class="contact-item-text">
             <strong data-i18n="contact.location">Ubicación</strong>
-            <span>Lima, Perú</span>
+            <span>{{ site.data.sitio.ubicacion }}</span>
           </div>
         </div>
         <div class="contact-item">
           <span class="contact-item-icon">📸</span>
           <div class="contact-item-text">
             <strong data-i18n="contact.instagram">Instagram</strong>
-            <a href="https://www.instagram.com/liquido_bodyboard/" target="_blank" rel="noopener">@liquido_bodyboard</a>
+            <a href="{{ site.data.sitio.instagram_url }}" target="_blank" rel="noopener">{{ site.data.sitio.instagram }}</a>
           </div>
         </div>
       </div>
@@ -296,34 +230,24 @@
       <div class="contact-cta">
         <h3 data-i18n="contact.cta_h3">¿Listo para surfear?</h3>
         <p data-i18n="contact.cta_p">Escríbenos por WhatsApp para coordinar tu pedido, consultar disponibilidad o pedir asesoría personalizada para elegir tu tabla ideal.</p>
-        <a href="https://wa.me/51954781873?text=Hola%20Liquido%20Bodyboard%20%F0%9F%91%8B%2C%20quiero%20información%20sobre%20sus%20productos"
+        <a href="https://wa.me/{{ site.data.sitio.telefono }}?text=Hola%20Liquido%20Bodyboard%20%F0%9F%91%8B%2C%20quiero%20información%20sobre%20sus%20productos"
            target="_blank" rel="noopener" class="btn btn-whatsapp">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-          </svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           <span data-i18n="contact.cta_btn">Escribir por WhatsApp</span>
         </a>
 
         <div class="social-links">
-          <a href="https://www.instagram.com/liquido_bodyboard/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-            </svg>
+          <a href="{{ site.data.sitio.instagram_url }}" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
           </a>
-          <a href="https://www.facebook.com/LiquidoBodyboard/" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
-            </svg>
+          <a href="{{ site.data.sitio.facebook_url }}" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
           </a>
-          <a href="https://www.tiktok.com/@liquidobodyboard" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.67a8.18 8.18 0 004.78 1.52V6.74a4.85 4.85 0 01-1.01-.05z"/>
-            </svg>
+          <a href="{{ site.data.sitio.tiktok_url }}" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.67a8.18 8.18 0 004.78 1.52V6.74a4.85 4.85 0 01-1.01-.05z"/></svg>
           </a>
-          <a href="https://wa.me/51954781873" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-            </svg>
+          <a href="https://wa.me/{{ site.data.sitio.telefono }}" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           </a>
         </div>
       </div>
@@ -333,85 +257,8 @@
 
 
 <!-- ============================================================
-     FOOTER
+     CATÁLOGO INLINE SCRIPT
      ============================================================ -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="#top" class="logo">
-          <img src="img/logo.jpg" alt="" class="logo-img" aria-hidden="true">
-          LIQUIDO<span class="logo-dot">.</span>
-        </a>
-        <p data-i18n="footer.brand_p">Tablas y accesorios de bodyboard para todos los niveles. Compra directo por WhatsApp desde Lima, Perú.</p>
-        <div class="social-links">
-          <a href="https://www.instagram.com/liquido_bodyboard/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-            </svg>
-          </a>
-          <a href="https://www.facebook.com/LiquidoBodyboard/" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
-            </svg>
-          </a>
-          <a href="https://www.tiktok.com/@liquidobodyboard" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.67a8.18 8.18 0 004.78 1.52V6.74a4.85 4.85 0 01-1.01-.05z"/>
-            </svg>
-          </a>
-          <a href="https://wa.me/51954781873" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="footer-col">
-        <h4 data-i18n="footer.nav_title">Navegar</h4>
-        <ul>
-          <li><a href="#top" data-i18n="nav.home">Inicio</a></li>
-          <li><a href="#catalogo" data-i18n="nav.catalog">Catálogo</a></li>
-          <li><a href="#nosotros" data-i18n="nav.about">Nosotros</a></li>
-          <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4 data-i18n="footer.help_title">Ayuda</h4>
-        <ul>
-          <li><a href="https://wa.me/51954781873?text=¿Cómo%20elijo%20la%20talla%20de%20mi%20tabla?" target="_blank" rel="noopener" data-i18n="footer.help_sizes">Guía de tallas</a></li>
-          <li><a href="https://wa.me/51954781873?text=Quiero%20información%20sobre%20envíos" target="_blank" rel="noopener" data-i18n="footer.help_ship">Envíos</a></li>
-          <li><a href="https://wa.me/51954781873" target="_blank" rel="noopener" data-i18n="nav.whatsapp">WhatsApp</a></li>
-          <li><a href="https://www.instagram.com/liquido_bodyboard/" target="_blank" rel="noopener">Instagram</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <span data-i18n="footer.copyright">© 2026 Liquido Bodyboard · Lima, Perú</span>
-      <span data-i18n="footer.tagline">Hecho con pasión por el bodyboard 🌊</span>
-    </div>
-  </div>
-</footer>
-
-
-<!-- Botón flotante WhatsApp -->
-<a href="https://wa.me/51954781873?text=Hola%20Liquido%20Bodyboard%20%F0%9F%91%8B%2C%20quiero%20información"
-   target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chatear por WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-  </svg>
-</a>
-
-
-<!-- ============================================================
-     SCRIPTS
-     ============================================================ -->
-<script src="assets/i18n.js"></script>
-<script src="assets/products.js"></script>
-<script src="assets/cart.js"></script>
 <script>
 /* ============================================================
    HOME — Lógica del catálogo con filtros y renderizado
@@ -421,13 +268,10 @@
 
   const SYMBOL = "S/";
 
-  /* --- Estado de filtros --- */
   let state = { search: "", cat: "", badge: "", price: "", sort: "" };
 
-  /* --- Filtrar y ordenar --- */
   function applyFilters() {
     let list = window.PRODUCTS.slice();
-
     if (state.search) {
       const q = state.search.toLowerCase();
       list = list.filter((p) =>
@@ -439,36 +283,26 @@
     if (state.cat)   list = list.filter((p) => p.categoria === state.cat);
     if (state.badge) list = list.filter((p) => p.badge === state.badge);
     if (state.price) list = list.filter((p) => p.precio <= parseFloat(state.price));
-
     if (state.sort === "price-asc")  list.sort((a, b) => a.precio - b.precio);
     if (state.sort === "price-desc") list.sort((a, b) => b.precio - a.precio);
     if (state.sort === "name")       list.sort((a, b) => a.nombre.localeCompare(b.nombre));
-
     return list;
   }
 
-  /* --- Renderizar grilla --- */
   function renderGrid() {
     const grid    = document.getElementById("productsGrid");
     const countEl = document.getElementById("catalogCount");
     if (!grid) return;
-
     const products = applyFilters();
     if (countEl) countEl.textContent = `${products.length} ${products.length !== 1 ? t("catalog.product_plural") : t("catalog.product_single")}`;
-
     if (products.length === 0) {
-      grid.innerHTML = `
-        <div class="no-results">
-          <h3>${t("catalog.no_results_h3")}</h3>
-          <p>${t("catalog.no_results_p")} <button id="noResReset" style="color:var(--c-accent);font-weight:600;cursor:pointer">${t("catalog.no_results_btn")}</button>.</p>
-        </div>`;
+      grid.innerHTML = `<div class="no-results"><h3>${t("catalog.no_results_h3")}</h3><p>${t("catalog.no_results_p")} <button id="noResReset" style="color:var(--c-accent);font-weight:600;cursor:pointer">${t("catalog.no_results_btn")}</button>.</p></div>`;
       document.getElementById("noResReset")?.addEventListener("click", resetFilters);
       return;
     }
-
     grid.innerHTML = products.map((p) => `
       <article class="product-card">
-        <a href="producto/${p.slug}.html" class="card-img-wrap" tabindex="-1">
+        <a href="${p.slug.startsWith('http') ? p.slug : 'producto/' + p.slug + '.html'}" class="card-img-wrap" tabindex="-1">
           <img src="img/${p.id}.webp" alt="${p.nombre}" loading="lazy"
                onerror="this.parentElement.innerHTML='<div class=\\'card-img-placeholder\\'>🏄</div>'">
           ${p.badge ? `<span class="card-badge badge-${p.badge}">${t("badge." + p.badge)}</span>` : ""}
@@ -476,7 +310,7 @@
         <div class="card-body">
           <div class="card-category">${t("cat." + p.categoria)}</div>
           <h3 class="card-name">
-            <a href="producto/${p.slug}.html" style="color:inherit">${p.nombre}</a>
+            <a href="${p.slug.startsWith('http') ? p.slug : 'producto/' + p.slug + '.html'}" style="color:inherit">${p.nombre}</a>
           </h3>
           <p class="card-desc">${p.descripcion_corta}</p>
           <div class="card-meta">
@@ -485,52 +319,35 @@
           </div>
           <div class="card-price">${SYMBOL} ${p.precio.toFixed(2)} <small>${t("catalog.card_unit")}</small></div>
           <div class="card-actions">
-            <a href="producto/${p.slug}.html" class="btn btn-dark btn-sm">${t("catalog.card_view")}</a>
-            <button class="btn btn-primary btn-sm" data-add-id="${p.id}" aria-label="Añadir ${p.nombre} al carrito">
-              ${t("catalog.card_add")}
-            </button>
+            <a href="${p.slug.startsWith('http') ? p.slug : 'producto/' + p.slug + '.html'}" class="btn btn-dark btn-sm">${t("catalog.card_view")}</a>
+            <button class="btn btn-primary btn-sm" data-add-id="${p.id}" aria-label="Añadir ${p.nombre} al carrito">${t("catalog.card_add")}</button>
           </div>
         </div>
       </article>`).join("");
-
-    // Conectar botones de añadir al carrito
     grid.querySelectorAll("[data-add-id]").forEach((btn) => {
       btn.addEventListener("click", () => {
         window.Cart.add(parseInt(btn.dataset.addId, 10), 1);
         window.Cart.open();
       });
     });
-
     renderChips();
   }
 
-  /* --- Chips de filtros activos --- */
   function renderChips() {
     const container = document.getElementById("filterChips");
     if (!container) return;
-    const sortLabels = {
-      "price-asc":  t("catalog.sort_price_asc"),
-      "price-desc": t("catalog.sort_price_desc"),
-      "name":       t("catalog.sort_name"),
-    };
+    const sortLabels = { "price-asc": t("catalog.sort_price_asc"), "price-desc": t("catalog.sort_price_desc"), "name": t("catalog.sort_name") };
     const chips = [];
     if (state.search) chips.push({ key: "search", label: t("catalog.chip_search", { v: state.search }) });
     if (state.cat)    chips.push({ key: "cat",    label: t("catalog.chip_cat",    { v: t("cat."   + state.cat)   }) });
     if (state.badge)  chips.push({ key: "badge",  label: t("catalog.chip_badge",  { v: t("badge." + state.badge) }) });
     if (state.price)  chips.push({ key: "price",  label: t("catalog.chip_price",  { v: state.price }) });
     if (state.sort)   chips.push({ key: "sort",   label: t("catalog.chip_sort",   { v: sortLabels[state.sort] || state.sort }) });
-
-    container.innerHTML = chips.map((c) => `
-      <span class="filter-chip-active">
-        ${c.label}
-        <button data-clear="${c.key}" aria-label="Quitar filtro ${c.label}">✕</button>
-      </span>`).join("");
-
+    container.innerHTML = chips.map((c) => `<span class="filter-chip-active">${c.label} <button data-clear="${c.key}" aria-label="Quitar filtro ${c.label}">✕</button></span>`).join("");
     container.querySelectorAll("[data-clear]").forEach((btn) => {
       btn.addEventListener("click", () => {
         const key = btn.dataset.clear;
         state[key] = "";
-        // Resetear el control correspondiente
         const map = { search: "filterSearch", cat: "filterCat", badge: "filterBadge", price: "filterPrice", sort: "filterSort" };
         const el = document.getElementById(map[key]);
         if (el) el.value = "";
@@ -548,7 +365,6 @@
     renderGrid();
   }
 
-  /* --- Bind de controles --- */
   function bindFilters() {
     const searchEl = document.getElementById("filterSearch");
     const catEl    = document.getElementById("filterCat");
@@ -556,7 +372,6 @@
     const priceEl  = document.getElementById("filterPrice");
     const sortEl   = document.getElementById("filterSort");
     const resetEl  = document.getElementById("resetFilters");
-
     let searchTimer;
     searchEl?.addEventListener("input", () => {
       clearTimeout(searchTimer);
@@ -569,41 +384,26 @@
     resetEl?.addEventListener("click", resetFilters);
   }
 
-  /* --- Header scroll --- */
   function bindHeader() {
     const header = document.getElementById("mainHeader");
-    window.addEventListener("scroll", () => {
-      header?.classList.toggle("scrolled", window.scrollY > 60);
-    }, { passive: true });
+    window.addEventListener("scroll", () => { header?.classList.toggle("scrolled", window.scrollY > 60); }, { passive: true });
   }
 
-  /* --- Menú móvil --- */
   function bindMobileNav() {
     const hamburger = document.getElementById("hamburgerBtn");
     const mobileNav = document.getElementById("mobileNav");
     const closeBtn  = document.getElementById("mobileNavClose");
-
     hamburger?.addEventListener("click", () => mobileNav?.classList.add("open"));
     closeBtn?.addEventListener("click",  () => mobileNav?.classList.remove("open"));
-    mobileNav?.querySelectorAll("a").forEach((a) =>
-      a.addEventListener("click", () => mobileNav.classList.remove("open"))
-    );
+    mobileNav?.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => mobileNav.classList.remove("open")));
   }
 
-  /* --- Init --- */
   document.addEventListener("DOMContentLoaded", () => {
     bindHeader();
     bindMobileNav();
     bindFilters();
     renderGrid();
-    /* Re-renderizar catálogo cuando cambia el idioma */
-    window.addEventListener("liquido:langchange", () => {
-      renderGrid();
-      window.I18N.applyLang();   // actualiza filtros y opciones
-    });
+    window.addEventListener("liquido:langchange", () => { renderGrid(); window.I18N.applyLang(); });
   });
 })();
 </script>
-
-</body>
-</html>

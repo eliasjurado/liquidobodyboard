@@ -1,0 +1,73 @@
+---
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ page.descripcion_corta }}">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:title" content="Liquido Bodyboard · {{ page.nombre }}">
+  <meta property="og:description" content="{{ page.descripcion_corta }}">
+  <meta property="og:type" content="product">
+
+  <title>Liquido Bodyboard · {{ page.nombre }}</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+</head>
+<body>
+
+{% include header.html %}
+
+<!-- ============================================================
+     PDP PAGE
+     ============================================================ -->
+<div class="pdp-wrapper" id="pdp">
+  <div class="container">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ '/' | relative_url }}" data-i18n="pdp.breadcrumb_home">Inicio</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="{{ '/' | relative_url }}#catalogo" data-i18n="pdp.breadcrumb_catalog">Catálogo</a>
+      <span class="breadcrumb-sep">/</span>
+      <span style="color:var(--c-text)">{{ page.nombre }}</span>
+    </nav>
+
+    <div class="pdp-grid">
+      <!-- Galería -->
+      <div class="pdp-gallery" id="pdpGallery"></div>
+
+      <!-- Info -->
+      <div class="pdp-info" id="pdpInfo"></div>
+    </div>
+
+    <!-- Pestañas (descripción / specs) -->
+    <div class="pdp-tabs" id="pdpTabs"></div>
+
+    {% assign related_count = site.data.productos | where_exp: "p", "p.slug != page.slug" | size %}
+    {% if related_count > 0 %}
+    <!-- Productos relacionados -->
+    <section class="pdp-related">
+      <h2 data-i18n="pdp.related">También te puede interesar</h2>
+      <div class="related-grid" id="relatedGrid"></div>
+    </section>
+    {% endif %}
+  </div>
+</div>
+
+{% include footer.html %}
+
+<!-- Product data + scripts -->
+{% include products-data.html %}
+<script src="{{ '/assets/i18n.js' | relative_url }}"></script>
+<script src="{{ '/assets/cart.js' | relative_url }}"></script>
+<script>window.PRODUCT_SLUG = "{{ page.slug }}";</script>
+<script src="{{ '/assets/detail.js' | relative_url }}"></script>
+
+</body>
+</html>
