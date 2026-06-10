@@ -1,92 +1,82 @@
 ---
 title: Liquido Bodyboard — Ride the Wave. Feel the Rush.
-description: Tablas y accesorios de bodyboard para todos los niveles. Compra directo por WhatsApp.
+description: Tablas y accesorios de bodyboard para todos los niveles. Compra directo por WhatsApp desde Lima, Perú.
 layout: default
 ---
 
-<!-- ============================================================
-     HERO BANNER - Video de fondo
-     ============================================================ -->
+<!-- HERO -->
 <section class="hero" id="top">
-  <video class="hero-video" autoplay muted loop playsinline poster="/img/hero-banner.webp">
-    <source src="/img/hero-video.mp4" type="video/mp4">
+  <video class="hero-video" autoplay muted loop playsinline poster="{{ '/img/hero-banner.webp' | relative_url }}">
+    <source src="{{ '/img/hero-banner-pride.mp4' | relative_url }}" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
-  <div class="container">
-    <div class="hero-content">
-      <h1>RIDE THE WAVE</h1>
-      <p class="hero-sub">
-        Tablas y accesorios de bodyboard para todos los niveles.
-        Compra directo por WhatsApp desde Lima, Perú.
-      </p>
-      <div class="hero-ctas">
-        <a href="#catalogo" class="btn btn-primary btn-lg">Ver catálogo</a>
-        <a href="#nosotros" class="btn btn-secondary btn-lg">Nuestra historia</a>
-      </div>
+
+  <div class="hero-content">
+    <p class="hero-label" data-i18n="hero.label">Bodyboard · Lima, Perú</p>
+    <h1>RIDE THE WAVE</h1>
+    <p class="hero-sub" data-i18n="hero.sub">Tablas y accesorios de bodyboard para todos los niveles. Directo del mar a tus manos. Compra sin complicaciones por WhatsApp.</p>
+
+    <div class="hero-search">
+      <input type="text" id="heroSearchInput" placeholder="¿Qué bodyboard buscas?" autocomplete="off">
     </div>
+
+    <div class="hero-actions">
+      <a href="#catalogo" class="btn btn-primary" data-i18n="hero.cta_catalog">Ver catálogo</a>
+      <a href="#nosotros" class="btn btn-outline" data-i18n="hero.cta_about">Nuestra historia</a>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span></span>
   </div>
 </section>
 
-<!-- ============================================================
-     CATEGORÍAS - Acceso rápido
-     ============================================================ -->
-<section class="categories-section">
+<!-- CATEGORÍAS -->
+<section class="section" id="categorias">
   <div class="container">
+    <div class="section-header">
+      <h2>Categorías</h2>
+      <p>Explora por tipo de producto</p>
+    </div>
     <div class="categories-grid">
-      <a href="#catalogo" class="category-card" data-filter-cat="Bodyboards">
-        <div class="category-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M21 14c-1 0-1.9-.4-2.6-1-.7.6-1.6 1-2.6 1-1 0-1.9-.4-2.6-1-.7.6-1.6 1-2.6 1-1 0-1.9-.4-2.6-1-.7.6-1.6 1-2.6 1v-2c.6 0 1.1-.2 1.5-.6.4-.4.6-.9.6-1.4h2c0 .6.2 1.1.6 1.4.4.4.9.6 1.5.6s1.1-.2 1.5-.6c.4-.4.6-.9.6-1.4h2c0 .6.2 1.1.6 1.4.4.4.9.6 1.5.6s1.1-.2 1.5-.6c.4-.4.6-.9.6-1.4h2c0 .6.2 1.1.6 1.4.4.4.9.6 1.5.6v2z"/>
-          </svg>
+      <a href="#catalogo" class="category-card" data-filter-cat="Bodyboards" onclick="return filterByCategory('Bodyboards', event)">
+        <img src="{{ '/img/1.webp' | relative_url }}" alt="Bodyboards" loading="lazy">
+        <div class="category-card-overlay"></div>
+        <div class="category-card-content">
+          <h3>Bodyboards</h3>
+          <p>Tablas Pro e iniciación · 5 productos</p>
         </div>
-        <div class="category-name">Bodyboards</div>
-        <div class="category-count">5 productos</div>
       </a>
-      <a href="#catalogo" class="category-card" data-filter-cat="Accesorios">
-        <div class="category-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
-            <circle cx="12" cy="12" r="5"/>
-          </svg>
+      <a href="#catalogo" class="category-card" data-filter-cat="Accesorios" onclick="return filterByCategory('Accesorios', event)">
+        <img src="{{ '/img/6.webp' | relative_url }}" alt="Accesorios" loading="lazy">
+        <div class="category-card-overlay"></div>
+        <div class="category-card-content">
+          <h3>Accesorios</h3>
+          <p>Leashes, wax, fundas y más · 9 productos</p>
         </div>
-        <div class="category-name">Accesorios</div>
-        <div class="category-count">9 productos</div>
       </a>
-      <a href="#catalogo" class="category-card" data-filter-cat="Kits">
-        <div class="category-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/>
-          </svg>
+      <a href="#catalogo" class="category-card" data-filter-cat="Kits" onclick="return filterByCategory('Kits', event)">
+        <img src="{{ '/img/15.webp' | relative_url }}" alt="Kits" loading="lazy">
+        <div class="category-card-overlay"></div>
+        <div class="category-card-content">
+          <h3>Kits</h3>
+          <p>Packs completos para empezar · 1 producto</p>
         </div>
-        <div class="category-name">Kits</div>
-        <div class="category-count">1 producto</div>
-      </a>
-      <a href="#catalogo" class="category-card" data-filter-badge="Pro">
-        <div class="category-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-        </div>
-        <div class="category-name">Pro</div>
-        <div class="category-count">Nivel avanzado</div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     CATÁLOGO
-     ============================================================ -->
-<section class="catalog-section section-pad" id="catalogo">
+<!-- CATÁLOGO -->
+<section class="section section-alt" id="catalogo">
   <div class="container">
 
     <div class="catalog-header">
-      <h2>Catálogo</h2>
+      <h2 data-i18n="catalog.title">Catálogo</h2>
       <span class="catalog-count" id="catalogCount"></span>
     </div>
 
-    <!-- Barra de filtros -->
-    <div class="filter-bar">
+    <div class="filter-bar" id="filterBar">
       <div class="filter-group">
         <label for="filterSearch">Buscar</label>
         <input type="text" id="filterSearch" placeholder="Nombre o descripción…">
@@ -111,65 +101,41 @@ layout: default
         </select>
       </div>
       <div class="filter-group">
-        <label for="filterPrice">Precio máx.</label>
-        <select id="filterPrice">
-          <option value="">Sin límite</option>
-          <option value="50">Hasta S/ 50</option>
-          <option value="100">Hasta S/ 100</option>
-          <option value="250">Hasta S/ 250</option>
-          <option value="400">Hasta S/ 400</option>
-        </select>
-      </div>
-      <div class="filter-group">
         <label for="filterSort">Ordenar</label>
         <select id="filterSort">
           <option value="">Por defecto</option>
-          <option value="price-asc">Precio: menor a mayor</option>
-          <option value="price-desc">Precio: mayor a menor</option>
-          <option value="name">Nombre A–Z</option>
+          <option value="price-asc">Menor precio</option>
+          <option value="price-desc">Mayor precio</option>
+          <option value="name">A–Z</option>
         </select>
-      </div>
-      <div class="filter-group" style="justify-content: flex-end;">
-        <button id="resetFilters" class="btn btn-sm btn-secondary">Limpiar filtros</button>
       </div>
     </div>
 
-    <!-- Chips de filtros activos -->
     <div class="filter-chips" id="filterChips"></div>
 
-    <!-- Grilla de productos -->
-    <div class="products-grid" id="productsGrid"></div>
+    <div class="products-grid" id="productsGrid">
+      <!-- rendered by JS from window.PRODUCTS -->
+    </div>
 
   </div>
 </section>
 
-<!-- ============================================================
-     SOBRE NOSOTROS
-     ============================================================ -->
-<section class="about-section section-pad" id="nosotros">
+<!-- NOSOTROS -->
+<section class="section" id="nosotros">
   <div class="container">
     <div class="about-grid">
-      <div class="about-img-wrap">
-        <img src="{{ '/img/about.webp' | relative_url }}" alt="Rider de bodyboard en ola peruana"
-             onerror="this.parentElement.innerHTML='<div class=\'about-img-placeholder\'><svg width=\'48\' height=\'48\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M21 14c-1 0-1.9-.4-2.6-1-.7.6-1.6 1-2.6 1-1 0-1.9-.4-2.6-1-.7.6-1.6 1-2.6 1-1 0-1.9-.4-2.6-1-.7.6-1.6 1-2.6 1v-2c.6 0 1.1-.2 1.5-.6.4-.4.6-.9.6-1.4h2c0 .6.2 1.1.6 1.4.4.4.9.6 1.5.6s1.1-.2 1.5-.6c.4-.4.6-.9.6-1.4h2c0 .6.2 1.1.6 1.4.4.4.9.6 1.5.6s1.1-.2 1.5-.6c.4-.4.6-.9.6-1.4h2c0 .6.2 1.1.6 1.4.4.4.9.6 1.5.6v2z\'/></svg></div>'">
+      <div class="about-image">
+        <img src="{{ '/img/about.webp' | relative_url }}"
+             alt="Rider de bodyboard en ola peruana"
+             loading="lazy">
       </div>
-      <div class="about-content">
-        <h2>Nacimos del mar</h2>
-        <p>
-          Liquido Bodyboard nació con una misión simple: acercar tablas y accesorios de calidad
-          a los riders peruanos, sin intermediarios ni precios inflados.
-        </p>
-        <p>
-          Somos apasionados del bodyboard y conocemos las olas del Pacífico como nadie.
-          Por eso seleccionamos cada producto pensando en lo que realmente necesitas
-          para surfear mejor, desde tus primeras olas hasta las más exigentes.
-        </p>
-        <p>
-          Atendemos por WhatsApp para que tu compra sea directa, personalizada y sin complicaciones.
-          Te asesoramos en la elección de tu tabla según tu peso, estatura y nivel.
-        </p>
+      <div class="about-text">
+        <h2 data-i18n="about.h2_html">Nacimos del mar</h2>
+        <p data-i18n="about.p1">Liquido Bodyboard nació con una misión simple: acercar tablas y accesorios de calidad a los riders peruanos, sin intermediarios ni precios inflados.</p>
+        <p data-i18n="about.p2">Somos apasionados del bodyboard y conocemos las olas del Pacífico como nadie. Por eso seleccionamos cada producto pensando en lo que realmente necesitas para surfear mejor, desde tus primeras olas hasta las más exigentes.</p>
+        <p data-i18n="about.p3">Atendemos por WhatsApp para que tu compra sea directa, personalizada y sin complicaciones. Te asesoramos en la elección de tu tabla según tu peso, estatura y nivel.</p>
         <a href="https://wa.me/{{ site.data.sitio.telefono }}?text=Hola%2C%20quisiera%20que%20me%20ayuden%20a%20elegir%20una%20tabla"
-           target="_blank" rel="noopener" class="btn btn-whatsapp">
+           target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="about.cta">
           Consúltanos por WhatsApp
         </a>
       </div>
@@ -177,117 +143,118 @@ layout: default
   </div>
 </section>
 
-<!-- ============================================================
-     VALORES
-     ============================================================ -->
-<section class="values-section section-pad" id="valores">
+<!-- VALORES -->
+<section class="section section-alt" id="valores">
   <div class="container">
-    <h2>Por qué elegirnos</h2>
+    <div class="section-header">
+      <h2 data-i18n="values.label">Por qué elegirnos</h2>
+      <p data-i18n="values.sub">Todo lo que necesitas para tus sesiones de bodyboard, con la garantía de quienes viven el mar.</p>
+    </div>
 
     <div class="values-grid">
       <div class="value-card">
-        <div class="value-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+        <div class="icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M21 14c-1 0-1.9-.4-2.6-1-.7.6-1.6 1-2.6 1-1 0-1.9-.4-2.6-1-.7.6-1.6 1-2.6 1-1 0-1.9-.4-2.6-1-.7.6-1.6 1-2.6 1v-2c.6 0 1.1-.2 1.5-.6.4-.4.6-.9.6-1.4h2c0 .6.2 1.1.6 1.4.4.4.9.6 1.5.6s1.1-.2 1.5-.6c.4-.4.6-.9.6-1.4h2c0 .6.2 1.1.6 1.4.4.4.9.6 1.5.6s1.1-.2 1.5-.6c.4-.4.6-.9.6-1.4h2c0 .6.2 1.1.6 1.4.4.4.9.6 1.5.6v2z"/>
           </svg>
         </div>
-        <h3>Conocemos las olas</h3>
-        <p>Somos riders activos. Probamos y seleccionamos cada producto en las olas del Pacífico peruano.</p>
+        <h3 data-i18n="values.v1_title">Conocemos las olas</h3>
+        <p data-i18n="values.v1_desc">Somos riders activos. Probamos y seleccionamos cada producto en las olas del Pacífico peruano.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+        <div class="icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
           </svg>
         </div>
-        <h3>Atención directa</h3>
-        <p>Sin formularios ni esperas. Te atendemos personalmente por WhatsApp y te asesoramos en tu compra.</p>
+        <h3 data-i18n="values.v2_title">Atención directa</h3>
+        <p data-i18n="values.v2_desc">Sin formularios ni esperas. Te atendemos personalmente por WhatsApp y te asesoramos en tu compra.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+        <div class="icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
           </svg>
         </div>
-        <h3>Envíos a todo el Perú</h3>
-        <p>Despachamos a Lima y provincias. Coordina el envío directamente con nosotros al hacer tu pedido.</p>
+        <h3 data-i18n="values.v3_title">Envíos a todo el Perú</h3>
+        <p data-i18n="values.v3_desc">Despachamos a Lima y provincias. Coordina el envío directamente con nosotros al hacer tu pedido.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+        <div class="icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
           </svg>
         </div>
-        <h3>Garantía de calidad</h3>
-        <p>Todos nuestros productos pasan por un control de calidad. Si algo falla, lo resolvemos.</p>
+        <h3 data-i18n="values.v4_title">Garantía de calidad</h3>
+        <p data-i18n="values.v4_desc">Todos nuestros productos pasan por un control de calidad. Si algo falla, lo resolvemos.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     CONTACTO
-     ============================================================ -->
-<section class="contact-section section-pad" id="contacto">
+<!-- CONTACTO -->
+<section class="section" id="contacto">
   <div class="container">
-    <h2>Hablemos</h2>
-    <p>¿Tienes dudas sobre qué tabla elegir? ¿Quieres hacer un pedido? Escríbenos.</p>
+    <div class="section-header">
+      <h2 data-i18n="contact.h2">Hablemos</h2>
+      <p data-i18n="contact.sub">¿Tienes dudas sobre qué tabla elegir? ¿Quieres hacer un pedido? Escríbenos.</p>
+    </div>
 
     <div class="contact-grid">
       <div class="contact-info">
         <div class="contact-item">
           <div class="contact-item-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
             </svg>
           </div>
           <div class="contact-item-text">
-            <strong>WhatsApp</strong>
-            <a href="https://wa.me/{{ site.data.sitio.telefono }}" target="_blank" rel="noopener">+51 {{ site.data.sitio.telefono | slice: 0, 3 }} {{ site.data.sitio.telefono | slice: 3, 3 }} {{ site.data.sitio.telefono | slice: 6, 3 }}</a>
+            <strong data-i18n="contact.whatsapp">WhatsApp</strong>
+            <a href="https://wa.me/{{ site.data.sitio.telefono }}" target="_blank" rel="noopener">+51 954 781 873</a>
           </div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
             </svg>
           </div>
           <div class="contact-item-text">
-            <strong>Ubicación</strong>
+            <strong data-i18n="contact.location">Ubicación</strong>
             <span>{{ site.data.sitio.ubicacion }}</span>
           </div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
               <circle cx="12" cy="12" r="3.5"/>
             </svg>
           </div>
           <div class="contact-item-text">
-            <strong>Instagram</strong>
+            <strong data-i18n="contact.instagram">Instagram</strong>
             <a href="{{ site.data.sitio.instagram_url }}" target="_blank" rel="noopener">{{ site.data.sitio.instagram }}</a>
           </div>
         </div>
       </div>
 
       <div class="contact-cta">
-        <h3>¿Listo para surfear?</h3>
-        <p>Escríbenos por WhatsApp para coordinar tu pedido, consultar disponibilidad o pedir asesoría personalizada para elegir tu tabla ideal.</p>
+        <h3 data-i18n="contact.cta_h3">¿Listo para surfear?</h3>
+        <p data-i18n="contact.cta_p">Escríbenos por WhatsApp para coordinar tu pedido, consultar disponibilidad o pedir asesoría personalizada para elegir tu tabla ideal.</p>
         <a href="https://wa.me/{{ site.data.sitio.telefono }}?text=Hola%20Liquido%20Bodyboard%2C%20quiero%20información%20sobre%20sus%20productos"
-           target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">
+           target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="contact.cta_btn">
           Escribir por WhatsApp
         </a>
 
-        <div class="social-links">
-          <a href="{{ site.data.sitio.instagram_url }}" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        <div class="social-row">
+          <a href="{{ site.data.sitio.instagram_url }}" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
           </a>
-          <a href="{{ site.data.sitio.facebook_url }}" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+          <a href="{{ site.data.sitio.facebook_url }}" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
           </a>
-          <a href="{{ site.data.sitio.tiktok_url }}" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.67a8.18 8.18 0 004.78 1.52V6.74a4.85 4.85 0 01-1.01-.05z"/></svg>
+          <a href="{{ site.data.sitio.tiktok_url }}" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.67a8.18 8.18 0 004.78 1.52V6.74a4.85 4.85 0 01-1.01-.05z"/></svg>
           </a>
         </div>
       </div>
@@ -295,72 +262,70 @@ layout: default
   </div>
 </section>
 
-<!-- ============================================================
-     CATÁLOGO INLINE SCRIPT
-     ============================================================ -->
+<!-- CATÁLOGO SCRIPT -->
 <script>
-/* ============================================================
-   HOME — Lógica del catálogo con filtros y renderizado
-   ============================================================ */
-(function () {
-  "use strict";
+(function() {
+  'use strict';
 
-  const SYMBOL = "S/";
-
-  let state = { search: "", cat: "", badge: "", price: "", sort: "" };
+  var SYMBOL = 'S/';
+  var state = { search: '', cat: '', badge: '', sort: '' };
 
   function applyFilters() {
-    let list = window.PRODUCTS.slice();
+    var list = (window.PRODUCTS || []).slice();
     if (state.search) {
-      const q = state.search.toLowerCase();
-      list = list.filter((p) =>
-        p.nombre.toLowerCase().includes(q) ||
-        p.descripcion_corta.toLowerCase().includes(q) ||
-        (p.tags || []).some((t) => t.includes(q))
-      );
+      var q = state.search.toLowerCase();
+      list = list.filter(function(p) {
+        return p.nombre.toLowerCase().includes(q) ||
+               (p.descripcion_corta && p.descripcion_corta.toLowerCase().includes(q));
+      });
     }
-    if (state.cat)   list = list.filter((p) => p.categoria === state.cat);
-    if (state.badge) list = list.filter((p) => p.badge === state.badge);
-    if (state.price) list = list.filter((p) => p.precio <= parseFloat(state.price));
-    if (state.sort === "price-asc")  list.sort((a, b) => a.precio - b.precio);
-    if (state.sort === "price-desc") list.sort((a, b) => b.precio - a.precio);
-    if (state.sort === "name")       list.sort((a, b) => a.nombre.localeCompare(b.nombre));
+    if (state.cat)   list = list.filter(function(p) { return p.categoria === state.cat; });
+    if (state.badge) list = list.filter(function(p) { return p.badge === state.badge; });
+    if (state.sort === 'price-asc')  list.sort(function(a, b) { return a.precio - b.precio; });
+    if (state.sort === 'price-desc') list.sort(function(a, b) { return b.precio - a.precio; });
+    if (state.sort === 'name')       list.sort(function(a, b) { return a.nombre.localeCompare(b.nombre); });
     return list;
   }
 
+  function badgeClass(b) {
+    if (!b) return '';
+    return b.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
   function renderGrid() {
-    const grid    = document.getElementById("productsGrid");
-    const countEl = document.getElementById("catalogCount");
+    var grid = document.getElementById('productsGrid');
+    var countEl = document.getElementById('catalogCount');
     if (!grid) return;
-    const products = applyFilters();
-    if (countEl) countEl.textContent = `${products.length} producto${products.length !== 1 ? 's' : ''}`;
+    var products = applyFilters();
+    if (countEl) countEl.textContent = products.length + ' producto' + (products.length !== 1 ? 's' : '');
     if (products.length === 0) {
-      grid.innerHTML = `<div class="no-results"><h3>Sin resultados</h3><p>No encontramos productos con esos filtros.</p></div>`;
+      grid.innerHTML = '<div class="no-results"><h3 style="font-family:var(--font-heading);font-size:2rem;margin-bottom:12px">Sin resultados</h3><p style="color:var(--c-text-2)">Intenta ajustando los filtros.</p></div>';
       return;
     }
-    grid.innerHTML = products.map((p) => `
-      <article class="product-card">
-        <a href="${p.slug.startsWith('http') ? p.slug : 'producto/' + p.slug + '.html'}" class="card-img-wrap" tabindex="-1">
-          <img src="img/${p.id}.webp" alt="${p.nombre}" loading="lazy"
-               onerror="this.parentElement.innerHTML='<div class=\'card-img-placeholder\'><svg width=\'48\' height=\'48\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7\'/></svg></div>'">
-          ${p.badge ? `<span class="card-badge badge-${p.badge}">${p.badge}</span>` : ""}
-        </a>
-        <div class="card-body">
-          <div class="card-category">${p.categoria}</div>
-          <h3 class="card-name">
-            <a href="${p.slug.startsWith('http') ? p.slug : 'producto/' + p.slug + '.html'}" style="color:inherit">${p.nombre}</a>
-          </h3>
-          <p class="card-desc">${p.descripcion_corta}</p>
-          <div class="card-price">${SYMBOL} ${p.precio.toFixed(2)}</div>
-          <div class="card-actions">
-            <a href="${p.slug.startsWith('http') ? p.slug : 'producto/' + p.slug + '.html'}" class="btn btn-secondary btn-sm">Ver detalle</a>
-            <button class="btn btn-primary btn-sm" data-add-id="${p.id}" aria-label="Añadir ${p.nombre} al carrito">Añadir</button>
-          </div>
-        </div>
-      </article>`).join("");
-    grid.querySelectorAll("[data-add-id]").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        window.Cart.add(parseInt(btn.dataset.addId, 10), 1);
+    grid.innerHTML = products.map(function(p) {
+      var href = (p.slug && p.slug.startsWith('http')) ? p.slug : 'producto/' + p.slug + '.html';
+      var badgeHtml = p.badge ? '<span class="card-badge ' + badgeClass(p.badge) + '">' + p.badge + '</span>' : '';
+      return [
+        '<article class="product-card">',
+          '<a href="' + href + '" class="card-media" tabindex="-1">',
+            '<img src="img/' + p.id + '.webp" alt="' + p.nombre + '" loading="lazy" onerror="this.style.opacity=\'0\'">',
+            badgeHtml,
+          '</a>',
+          '<div class="card-body">',
+            '<div class="card-category">' + p.categoria + '</div>',
+            '<h3 class="card-name"><a href="' + href + '" style="color:inherit">' + p.nombre + '</a></h3>',
+            '<p class="card-desc">' + (p.descripcion_corta || '') + '</p>',
+            '<div class="card-footer">',
+              '<span class="card-price">' + SYMBOL + ' ' + p.precio.toFixed(2) + '</span>',
+              '<button class="btn btn-outline btn-sm" data-add-id="' + p.id + '">Añadir</button>',
+            '</div>',
+          '</div>',
+        '</article>'
+      ].join('');
+    }).join('');
+    grid.querySelectorAll('[data-add-id]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        window.Cart.add(parseInt(this.dataset.addId, 10), 1);
         window.Cart.open();
       });
     });
@@ -368,140 +333,118 @@ layout: default
   }
 
   function renderChips() {
-    const container = document.getElementById("filterChips");
+    var container = document.getElementById('filterChips');
     if (!container) return;
-    const sortLabels = { "price-asc": "Precio: menor a mayor", "price-desc": "Precio: mayor a menor", "name": "Nombre A–Z" };
-    const chips = [];
-    if (state.search) chips.push({ key: "search", label: `Buscar: ${state.search}` });
-    if (state.cat)    chips.push({ key: "cat",    label: `Categoría: ${state.cat}` });
-    if (state.badge)  chips.push({ key: "badge",  label: `Nivel: ${state.badge}` });
-    if (state.price)  chips.push({ key: "price",  label: `Hasta S/ ${state.price}` });
-    if (state.sort)   chips.push({ key: "sort",   label: sortLabels[state.sort] || state.sort });
-    container.innerHTML = chips.map((c) => `<span class="filter-chip-active">${c.label} <button data-clear="${c.key}" aria-label="Quitar filtro ${c.label}">✕</button></span>`).join("");
-    container.querySelectorAll("[data-clear]").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const key = btn.dataset.clear;
-        state[key] = "";
-        const map = { search: "filterSearch", cat: "filterCat", badge: "filterBadge", price: "filterPrice", sort: "filterSort" };
-        const el = document.getElementById(map[key]);
-        if (el) el.value = "";
+    var chips = [];
+    if (state.search) chips.push({ key: 'search', label: 'Búsqueda: "' + state.search + '"' });
+    if (state.cat)    chips.push({ key: 'cat',    label: 'Categoría: ' + state.cat });
+    if (state.badge)  chips.push({ key: 'badge',  label: 'Nivel: ' + state.badge });
+    if (state.sort) {
+      var labels = { 'price-asc': 'Menor precio', 'price-desc': 'Mayor precio', 'name': 'A–Z' };
+      chips.push({ key: 'sort', label: labels[state.sort] || state.sort });
+    }
+    if (chips.length === 0) { container.innerHTML = ''; return; }
+    container.innerHTML = chips.map(function(c) {
+      return '<span class="filter-chip">' + c.label + ' <button data-clear="' + c.key + '" aria-label="Quitar">✕</button></span>';
+    }).join('');
+    container.querySelectorAll('[data-clear]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var key = this.dataset.clear;
+        state[key] = '';
+        var map = { search: 'filterSearch', cat: 'filterCat', badge: 'filterBadge', sort: 'filterSort' };
+        var el = document.getElementById(map[key]);
+        if (el) el.value = '';
         renderGrid();
       });
     });
-  }
-
-  function resetFilters() {
-    state = { search: "", cat: "", badge: "", price: "", sort: "" };
-    ["filterSearch","filterCat","filterBadge","filterPrice","filterSort"].forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) el.value = "";
-    });
-    renderGrid();
   }
 
   function bindFilters() {
-    const searchEl = document.getElementById("filterSearch");
-    const catEl    = document.getElementById("filterCat");
-    const badgeEl  = document.getElementById("filterBadge");
-    const priceEl  = document.getElementById("filterPrice");
-    const sortEl   = document.getElementById("filterSort");
-    const resetEl  = document.getElementById("resetFilters");
-    let searchTimer;
-    searchEl?.addEventListener("input", () => {
-      clearTimeout(searchTimer);
-      searchTimer = setTimeout(() => { state.search = searchEl.value.trim(); renderGrid(); }, 300);
+    var searchEl = document.getElementById('filterSearch');
+    var catEl = document.getElementById('filterCat');
+    var badgeEl = document.getElementById('filterBadge');
+    var sortEl = document.getElementById('filterSort');
+    var timer;
+    searchEl && searchEl.addEventListener('input', function() {
+      clearTimeout(timer);
+      timer = setTimeout(function() { state.search = searchEl.value.trim(); renderGrid(); }, 250);
     });
-    catEl?.addEventListener("change",   () => { state.cat   = catEl.value;   renderGrid(); });
-    badgeEl?.addEventListener("change", () => { state.badge = badgeEl.value; renderGrid(); });
-    priceEl?.addEventListener("change", () => { state.price = priceEl.value; renderGrid(); });
-    sortEl?.addEventListener("change",  () => { state.sort  = sortEl.value;  renderGrid(); });
-    resetEl?.addEventListener("click", resetFilters);
+    catEl   && catEl.addEventListener('change',   function() { state.cat   = this.value; renderGrid(); });
+    badgeEl && badgeEl.addEventListener('change', function() { state.badge = this.value; renderGrid(); });
+    sortEl  && sortEl.addEventListener('change',  function() { state.sort  = this.value; renderGrid(); });
   }
 
-  function bindHeader() {
-    const header = document.getElementById("mainHeader");
-    window.addEventListener("scroll", () => { header?.classList.toggle("scrolled", window.scrollY > 60); }, { passive: true });
+  function bindSearch() {
+    var toggle = document.getElementById('searchToggleBtn');
+    var bar = document.getElementById('searchBar');
+    var input = document.getElementById('headerSearch');
+    toggle && toggle.addEventListener('click', function() {
+      bar.classList.toggle('open');
+      if (bar.classList.contains('open')) input && input.focus();
+    });
+    input && input.addEventListener('input', function() {
+      var fs = document.getElementById('filterSearch');
+      if (fs) { fs.value = this.value; state.search = this.value.trim(); renderGrid(); }
+    });
+    document.addEventListener('click', function(e) {
+      if (bar && toggle && !bar.contains(e.target) && !toggle.contains(e.target)) {
+        bar.classList.remove('open');
+      }
+    });
   }
 
   function bindMobileNav() {
-    const hamburger = document.getElementById("hamburgerBtn");
-    const mobileNav = document.getElementById("mobileNav");
-    const closeBtn  = document.getElementById("mobileNavClose");
-    hamburger?.addEventListener("click", () => mobileNav?.classList.add("open"));
-    closeBtn?.addEventListener("click",  () => mobileNav?.classList.remove("open"));
-    mobileNav?.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => mobileNav.classList.remove("open")));
+    var hamburger = document.getElementById('hamburgerBtn');
+    var nav = document.getElementById('mobileNav');
+    var overlay = document.getElementById('mobileNavOverlay');
+    var closeBtn = document.getElementById('mobileNavClose');
+    function open() { nav.classList.add('open'); overlay.classList.add('open'); }
+    function closeAll() { nav.classList.remove('open'); overlay.classList.remove('open'); }
+    hamburger && hamburger.addEventListener('click', open);
+    closeBtn  && closeBtn.addEventListener('click', closeAll);
+    overlay   && overlay.addEventListener('click', closeAll);
+    nav && nav.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeAll); });
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    bindHeader();
-    bindMobileNav();
+  function bindHeroSearch() {
+    var heroSearch = document.getElementById('heroSearchInput');
+    if (!heroSearch) return;
+    heroSearch.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        var q = this.value.trim();
+        var fs = document.getElementById('filterSearch');
+        if (fs) {
+          fs.value = q;
+          state.search = q;
+          renderGrid();
+        }
+        document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
     bindFilters();
     bindSearch();
-    bindCategories();
+    bindMobileNav();
+    bindHeroSearch();
     renderGrid();
   });
 
-  // Búsqueda en header
-  function bindSearch() {
-    const searchToggle = document.getElementById("searchToggleBtn");
-    const searchBar = document.getElementById("searchBar");
-    const headerSearch = document.getElementById("headerSearch");
-    const filterSearch = document.getElementById("filterSearch");
-
-    searchToggle?.addEventListener("click", () => {
-      searchBar.classList.toggle("open");
-      if (searchBar.classList.contains("open")) {
-        headerSearch?.focus();
-      }
-    });
-
-    // Sincronizar búsqueda del header con filtros
-    headerSearch?.addEventListener("input", () => {
-      if (filterSearch) {
-        filterSearch.value = headerSearch.value;
-        state.search = headerSearch.value.trim();
-        renderGrid();
-      }
-    });
-
-    // Cerrar búsqueda al hacer clic fuera
-    document.addEventListener("click", (e) => {
-      if (!searchBar.contains(e.target) && !searchToggle.contains(e.target)) {
-        searchBar.classList.remove("open");
-      }
-    });
-  }
-
-  // Filtros por categoría (click en cards)
-  function bindCategories() {
-    const categoryCards = document.querySelectorAll(".category-card");
-    const filterCat = document.getElementById("filterCat");
-    const filterBadge = document.getElementById("filterBadge");
-
-    categoryCards.forEach(card => {
-      card.addEventListener("click", (e) => {
-        e.preventDefault();
-        const cat = card.dataset.filterCat;
-        const badge = card.dataset.filterBadge;
-
-        if (cat && filterCat) {
-          filterCat.value = cat;
-          state.cat = cat;
-          state.badge = "";
-          if (filterBadge) filterBadge.value = "";
-        } else if (badge && filterBadge) {
-          filterBadge.value = badge;
-          state.badge = badge;
-          state.cat = "";
-          if (filterCat) filterCat.value = "";
-        }
-
-        renderGrid();
-        
-        // Scroll al catálogo
-        document.getElementById("catalogo")?.scrollIntoView({ behavior: "smooth" });
-      });
-    });
-  }
+  window.filterByCategory = function(cat, event) {
+    if (event) event.preventDefault();
+    var catEl = document.getElementById('filterCat');
+    if (catEl) {
+      catEl.value = cat;
+      state.cat = cat;
+      state.badge = '';
+      var badgeEl = document.getElementById('filterBadge');
+      if (badgeEl) badgeEl.value = '';
+      renderGrid();
+    }
+    var catalog = document.getElementById('catalogo');
+    if (catalog) catalog.scrollIntoView({ behavior: 'smooth' });
+  };
 })();
 </script>

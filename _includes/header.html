@@ -1,9 +1,12 @@
-<!-- HEADER STICKY -->
+<div class="announcement">
+  Envío gratis en compras mayores a S/ 150 · Entregas en Lima y provincias
+</div>
+
 <header class="header" id="mainHeader">
   <div class="header-inner">
-    <a href="{{ '/' | relative_url }}" class="logo" aria-label="Liquido Bodyboard — inicio">
+    <a href="{{ '/' | relative_url }}" class="logo" data-i18n-aria="nav.aria_logo" aria-label="Liquido Bodyboard — inicio">
       <img src="{{ '/img/logo.jpg' | relative_url }}" alt="" class="logo-img" aria-hidden="true">
-      LIQUIDO
+      <span class="logo-text">LIQUIDO</span>
     </a>
 
     <nav class="nav" role="navigation" aria-label="Navegación principal">
@@ -14,45 +17,42 @@
     </nav>
 
     <div class="header-actions">
-      <button class="search-toggle" id="searchToggleBtn" aria-label="Buscar productos">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <button class="header-icon search-toggle" id="searchToggleBtn" aria-label="Buscar productos">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="11" cy="11" r="8"/>
           <line x1="21" y1="21" x2="16.65" y2="16.65"/>
         </svg>
       </button>
-      <button id="langToggleBtn" class="lang-toggle" aria-label="Cambiar a inglés">EN</button>
-      <a href="https://wa.me/{{ site.data.sitio.telefono }}?text=Hola%20Liquido%20Bodyboard%2C%20quiero%20información%20sobre%20sus%20productos"
-         target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm" aria-label="Contactar por WhatsApp">
-        <span data-i18n="nav.whatsapp">WhatsApp</span>
-      </a>
-      <button class="cart-btn" id="cartOpenBtn" data-cart-open data-i18n-aria="nav.aria_cart" aria-label="Abrir carrito">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+      
+      <button class="cart-btn header-icon" id="cartOpenBtn" data-cart-open data-i18n-aria="nav.aria_cart" aria-label="Abrir carrito">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
           <line x1="3" y1="6" x2="21" y2="6"/>
           <path d="M16 10a4 4 0 01-8 0"/>
         </svg>
         <span class="cart-badge" style="display:none">0</span>
       </button>
+
       <button class="hamburger" id="hamburgerBtn" data-i18n-aria="nav.aria_menu" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
-  
-  <!-- Barra de búsqueda expandible -->
+
   <div class="search-bar" id="searchBar">
     <div class="search-bar-inner">
-      <input type="text" id="headerSearch" placeholder="Buscar bodyboards, accesorios, kits..." autocomplete="off">
+      <input type="text" id="headerSearch" placeholder="Buscar bodyboards, accesorios, kits…" autocomplete="off">
     </div>
   </div>
 </header>
 
-<!-- Menú móvil -->
+<div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
 <nav class="mobile-nav" id="mobileNav" role="navigation" aria-label="Menú móvil">
-  <button class="mobile-nav-close" id="mobileNavClose" data-i18n-aria="nav.mobile_close" aria-label="Cerrar menú">✕</button>
-  <a href="{{ '/' | relative_url }}"       class="mobile-nav-link" data-i18n="nav.home">Inicio</a>
-  <a href="{{ '/' | relative_url }}#catalogo" class="mobile-nav-link" data-i18n="nav.catalog">Catálogo</a>
-  <a href="{{ '/' | relative_url }}#nosotros" class="mobile-nav-link" data-i18n="nav.about">Nosotros</a>
-  <a href="{{ '/' | relative_url }}#contacto" class="mobile-nav-link" data-i18n="nav.contact">Contacto</a>
-  <a href="https://wa.me/{{ site.data.sitio.telefono }}" target="_blank" rel="noopener" class="btn btn-whatsapp" style="margin-top:16px" data-i18n="nav.whatsapp">WhatsApp</a>
+  <button class="mobile-nav-close" id="mobileNavClose" aria-label="Cerrar menú">✕</button>
+  <a href="{{ '/' | relative_url }}" data-i18n="nav.home">Inicio</a>
+  <a href="{{ '/' | relative_url }}#catalogo" data-i18n="nav.catalog">Catálogo</a>
+  <a href="{{ '/' | relative_url }}#nosotros" data-i18n="nav.about">Nosotros</a>
+  <a href="{{ '/' | relative_url }}#contacto" data-i18n="nav.contact">Contacto</a>
 </nav>
