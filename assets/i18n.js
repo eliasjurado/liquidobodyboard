@@ -73,6 +73,7 @@
       "cart.reduce":      "Reducir cantidad",
       "cart.increase":    "Aumentar cantidad",
       "cart.remove":      "Eliminar producto",
+"cart.continue":    "Seguir comprando",
 
       "pdp.not_found_h2":       "Producto no encontrado",
       "pdp.not_found_p":        "El producto que buscas no existe o fue eliminado.",

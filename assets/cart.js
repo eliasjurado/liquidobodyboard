@@ -225,6 +225,7 @@
           </svg>
           <span data-i18n="cart.checkout">${(window.t||function(k){return k;})("cart.checkout")}</span>
         </button>
+        <button class="btn btn-outline cart-continue-btn" id="cartContinueBtn" data-i18n="cart.continue">Seguir comprando</button>
       </div>
     `;
 
@@ -233,6 +234,7 @@
 
     document.getElementById("cartCloseBtn").addEventListener("click", close);
     document.getElementById("cartCheckoutBtn").addEventListener("click", checkoutWhatsApp);
+    document.getElementById("cartContinueBtn").addEventListener("click", close);
   }
 
   function render() {
