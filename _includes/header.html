@@ -14,6 +14,12 @@
     </nav>
 
     <div class="header-actions">
+      <button class="search-toggle" id="searchToggleBtn" aria-label="Buscar productos">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
       <button id="langToggleBtn" class="lang-toggle" aria-label="Cambiar a inglés">EN</button>
       <a href="https://wa.me/{{ site.data.sitio.telefono }}?text=Hola%20Liquido%20Bodyboard%2C%20quiero%20información%20sobre%20sus%20productos"
          target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm" aria-label="Contactar por WhatsApp">
@@ -30,6 +36,13 @@
       <button class="hamburger" id="hamburgerBtn" data-i18n-aria="nav.aria_menu" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
+    </div>
+  </div>
+  
+  <!-- Barra de búsqueda expandible -->
+  <div class="search-bar" id="searchBar">
+    <div class="search-bar-inner">
+      <input type="text" id="headerSearch" placeholder="Buscar bodyboards, accesorios, kits..." autocomplete="off">
     </div>
   </div>
 </header>

@@ -118,7 +118,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 .nav a:hover { color: var(--c-white); }
 
-.header-actions { display: flex; align-items: center; gap: 20px; }
+.header-actions { display: flex; align-items: center; gap: 16px; }
+
+.search-toggle {
+  color: var(--c-white); cursor: pointer;
+  display: flex; align-items: center;
+}
+.search-toggle:hover { color: var(--c-text-muted); }
+
+/* Search Bar (expandible) */
+.search-bar {
+  position: absolute; top: 100%; left: 0; right: 0;
+  background: var(--c-black); border-bottom: 1px solid var(--c-border);
+  padding: 20px 0; display: none; z-index: 999;
+}
+.search-bar.open { display: block; }
+.search-bar-inner {
+  max-width: 800px; margin: 0 auto; padding: 0 24px;
+}
+.search-bar input {
+  width: 100%; padding: 14px 20px;
+  background: var(--c-bg-light); border: 1px solid var(--c-border);
+  border-radius: var(--radius-md); color: var(--c-white);
+  font-size: 1rem;
+}
+.search-bar input:focus {
+  outline: none; border-color: var(--c-white);
+}
 
 .cart-btn {
   position: relative; color: var(--c-white); font-size: 1.5rem;
@@ -165,35 +191,97 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================================
-   HERO
+   HERO - Compacto estilo bodyboardshop.com.au
    ============================================================ */
 .hero {
-  min-height: 100vh; background: var(--c-black);
+  min-height: 400px;
   display: flex; align-items: center; position: relative;
-  padding-top: var(--header-h);
+  padding: 80px 0 60px;
+  background-image: url('/img/hero-banner.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.hero-bg {
+.hero::before {
+  content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
 }
 .hero-content {
   position: relative; z-index: 1;
-  max-width: 800px; padding: 60px 0;
+  max-width: 800px; text-align: center;
+  margin: 0 auto;
 }
 .hero h1 {
-  font-size: clamp(3rem, 8vw, 6rem);
-  margin-bottom: 24px; line-height: 0.95;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 16px; line-height: 0.95;
 }
 .hero-sub {
-  font-size: 1.2rem; color: var(--c-text-muted);
-  margin-bottom: 40px; max-width: 600px; line-height: 1.7;
+  font-size: 1.1rem; color: var(--c-text-muted);
+  margin-bottom: 32px; max-width: 600px; line-height: 1.6;
+  margin-left: auto; margin-right: auto;
 }
-.hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
 
 @media (max-width: 768px) {
-  .hero-content { padding: 40px 0; }
-  .hero-ctas { flex-direction: column; }
-  .hero-ctas .btn { width: 100%; }
+  .hero { min-height: 300px; padding: 60px 0 40px; }
+  .hero-ctas { flex-direction: column; align-items: center; }
+  .hero-ctas .btn { width: 100%; max-width: 300px; }
+}
+
+/* ============================================================
+   CATEGORÍAS - Estilo bodyboardshop.com.au
+   ============================================================ */
+.categories-section {
+  background: var(--c-bg);
+  padding: 40px 0;
+  border-bottom: 1px solid var(--c-border);
+}
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.category-card {
+  background: var(--c-bg-light);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.category-card:hover {
+  border-color: var(--c-white);
+  transform: translateY(-2px);
+}
+.category-icon {
+  width: 48px; height: 48px;
+  margin: 0 auto 12px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--c-white);
+}
+.category-icon svg { width: 32px; height: 32px; }
+.category-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  color: var(--c-white);
+  letter-spacing: 0.05em;
+}
+.category-count {
+  font-size: 0.85rem;
+  color: var(--c-text-muted);
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .category-card { padding: 16px; }
+  .category-name { font-size: 1rem; }
 }
 
 /* ============================================================
