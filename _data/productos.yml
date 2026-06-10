@@ -205,23 +205,143 @@
     - accesorio
 
 - id: 10
+  slug: liquido-funda-bodyboard
+  nombre: Funda Liquido para Bodyboard
+  categoria: Accesorios
+  badge: Accesorio
+  descripcion_corta: Funda protectora para bodyboard hasta 42". Protege tu tabla durante el transporte y almacenamiento.
+  descripcion: Funda acolchada para bodyboard de hasta 42 pulgadas. Material resistente al agua con cremallera reforzada. Asa de transporte y correa para el hombro. Protege tu tabla de golpes, rayones y el sol durante el transporte.
+  especificaciones:
+    talla_maxima: 42"
+    material: Nylon acolchado 600D
+    cremallera: Reforzada YKK
+    bolsillos: 1 exterior para accesorios
+  precio: 85
+  stock: 12
+  peso: 0.6 kg
+  color_principal: Negro
+  tags:
+    - funda
+    - bolsa
+    - transporte
+    - proteccion
+    - accesorio
+
+- id: 11
+  slug: liquido-medias-guardines
+  nombre: Medias/Guardines Liquido
+  categoria: Accesorios
+  badge: Accesorio
+  descripcion_corta: Medias de neopreno para guardines. Protegen las aletas y mejoran el ajuste.
+  descripcion: Medias de neopreno de 2mm de espesor para guardines de bodyboard. Protegen las aletas del desgaste y mejoran el ajuste en el pie. Costuras reforzadas para mayor durabilidad. Ideales para usar con cualquier tipo de aleta.
+  especificaciones:
+    material: Neopreno 2mm
+    tallas: S, M, L, XL
+    costuras: Reforzadas
+    uso: Con cualquier tipo de aleta
+  precio: 35
+  stock: 25
+  peso: 0.15 kg
+  color_principal: Negro
+  tags:
+    - medias
+    - guardines
+    - neopreno
+    - aletas
+    - accesorio
+
+- id: 12
+  slug: liquido-fin-saver
+  nombre: Fin Saver Liquido
+  categoria: Accesorios
+  badge: Accesorio
+  descripcion_corta: Protector de aletas para bodyboard. Evita que las aletas se salgan durante el uso.
+  descripcion: Fin saver fabricado en uretano de alta resistencia. Mantiene las aletas firmemente en su lugar durante maniobras intensas y olas de potencia. Fácil instalación sin herramientas. Compatible con la mayoría de sistemas de aletas del mercado.
+  especificaciones:
+    material: Uretano flexible
+    compatibilidad: Universal
+    instalacion: Sin herramientas
+    durabilidad: Alta resistencia a impactos
+  precio: 25
+  stock: 30
+  peso: 0.05 kg
+  color_principal: Negro
+  tags:
+    - fin saver
+    - aletas
+    - protector
+    - uretano
+    - accesorio
+
+- id: 13
+  slug: liquido-bolsa-viaje
+  nombre: Bolsa de Viaje Liquido
+  categoria: Accesorios
+  badge: Accesorio
+  descripcion_corta: Bolsa de viaje acolchada para bodyboard. Capacidad para 2 tablas hasta 42".
+  descripcion: Bolsa de viaje premium para bodyboard con capacidad para 2 tablas de hasta 42 pulgadas. Acolchado de 10mm para máxima protección. Ruedas para fácil transporte. Bolsillos interiores para accesorios. Material impermeable resistente a UV.
+  especificaciones:
+    capacidad: 2 tablas hasta 42"
+    acolchado: 10mm EPE
+    ruedas: 2 ruedas de goma
+    bolsillos: 2 interiores + 1 exterior
+    material: Polyester 1680D impermeable
+  precio: 180
+  stock: 8
+  peso: 2.5 kg
+  color_principal: Negro / Gris
+  tags:
+    - bolsa
+    - viaje
+    - transporte
+    - ruedas
+    - premium
+    - accesorio
+
+- id: 14
+  slug: liquido-tapones-oido
+  nombre: Tapones de Oído Liquido
+  categoria: Accesorios
+  badge: Accesorio
+  descripcion_corta: Tapones de silicona para oídos. Previenen infecciones por agua (oído de surfista).
+  descripcion: Tapones de oído fabricados en silicona médica hipoalergénica. Diseñados específicamente para deportes acuáticos. Previenen la entrada de agua y reducen el riesgo de oído de surfista (exostosis). Incluyen estuche de transporte y cordón de seguridad.
+  especificaciones:
+    material: Silicona médica hipoalergénica
+    reduccion_sonora: 25 dB
+    impermeabilidad: IPX8
+    incluye: Estuche + cordón de seguridad
+    reutilizable: Si (lavable)
+  precio: 45
+  stock: 20
+  peso: 0.03 kg
+  color_principal: Transparente / Azul
+  tags:
+    - tapones
+    - oidos
+    - silicona
+    - prevencion
+    - salud
+    - accesorio
+
+- id: 15
   slug: liquido-kit-iniciacion
   nombre: Kit de Iniciación Liquido
   categoria: Kits
   badge: Pack
-  descripcion_corta: "Pack completo para empezar en el bodyboard: tabla PE 42\" + leash de muñeca + wax frío."
-  descripcion: "Todo lo que necesitas para tu primera sesión de bodyboard. Incluye tabla de polietileno 42\", leash de muñeca 180cm y wax frío 85gr. El pack perfecto como regalo o para iniciarse en el bodyboard."
+  descripcion_corta: "Pack completo para empezar en el bodyboard: tabla PE 42\" + leash de muñeca + wax frío + funda."
+  descripcion: "Todo lo que necesitas para tu primera sesión de bodyboard. Incluye tabla de polietileno 42\", leash de muñeca 180cm, wax frío 85gr y funda protectora. El pack perfecto como regalo o para iniciarse en el bodyboard con todo el equipo necesario."
   especificaciones:
     talla: 42"
     nucleo: Polietileno (PE)
-    incluye: Tabla PE 42" + Leash muñeca + Wax frío
+    incluye: Tabla PE 42" + Leash muñeca + Wax frío + Funda
     rails: 60/40
-  precio: 270
+  precio: 350
   stock: 5
-  peso: 1.7 kg
+  peso: 2.3 kg
   color_principal: Celeste / Negro
   tags:
     - kit
     - pack
     - iniciacion
     - principiante
+    - completo
