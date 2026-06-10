@@ -96,13 +96,16 @@ Checkout directo por WhatsApp (sin pasarela de pagos).
 - **Cuerpo:** Inter (sans-serif moderna, legible)
 
 ### Estilo Visual (basado en sitios de referencia)
-- Hero banner grande con imagen de producto/lifestyle
+- Hero con video de fondo (estilo pridebodyboards.com) + overlay oscuro
+- Buscador prominente en header con barra expandible
+- Sección de categorías visible justo debajo del hero
 - Grid de productos limpio con hover effects
 - Filtros de catálogo: categoría, nivel, precio, ordenamiento
 - Cards de producto con: imagen, nombre, precio, badge de nivel
 - Layout mobile-first responsive
 - Navegación sticky con menú hamburguesa en mobile
 - Carrito lateral (drawer) con checkout por WhatsApp
+- Iconos Material UI (sin emojis)
 
 ### Imágenes de Producto
 - Fotos realistas generadas con IA
